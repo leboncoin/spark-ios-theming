@@ -1,6 +1,6 @@
 //
 //  ThemeGeneratedMock+public extensionTests.swift
-//  SparkCoreTests
+//  SparkTheming
 //
 //  Created by michael.zimmermann on 10.05.23.
 //  Copyright © 2023 Adevinta. All rights reserved.

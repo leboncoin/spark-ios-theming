@@ -1,6 +1,6 @@
 //
 //  FontTextStyle+Extension.swift
-//  SparkCore
+//  SparkTheming
 //
 //  Created by robin.lemaire on 18/04/2023.
 //  Copyright © 2023 Adevinta. All rights reserved.

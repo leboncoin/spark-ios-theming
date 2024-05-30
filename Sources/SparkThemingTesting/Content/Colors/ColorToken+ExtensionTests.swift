@@ -1,6 +1,6 @@
 //
-//  ColorToken+public extensionTests.swift
-//  SparkCoreTests
+//  ColorToken+ExtensionTests.swift
+//  SparkThemingTesting
 //
 //  Created by louis.borlee on 13/09/2023.
 //  Copyright © 2023 Adevinta. All rights reserved.

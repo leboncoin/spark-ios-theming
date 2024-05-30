@@ -1,6 +1,6 @@
 //
 //  SparkLayout.swift
-//  Spark
+//  SparkTheme
 //
 //  Created by robin.lemaire on 28/02/2023.
 //  Copyright © 2023 Adevinta. All rights reserved.

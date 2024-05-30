@@ -1,6 +1,6 @@
 //
-//  DimsGeneratedMock+public extensionTests.swift
-//  SparkCore
+//  DimsGeneratedMock+ExtensionTests.swift
+//  SparkThemingTesting
 //
 //  Created by janniklas.freundt.ext on 04.05.23.
 //  Copyright © 2023 Adevinta. All rights reserved.

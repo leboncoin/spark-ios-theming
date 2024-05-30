@@ -1,6 +1,6 @@
 //
-//  TypographyGeneratedMock+public extensionTests.swift
-//  SparkCoreTests
+//  TypographyGeneratedMock+ExtensionTests.swift
+//  SparkThemingTesting
 //
 //  Created by michael.zimmermann on 10.05.23.
 //  Copyright © 2023 Adevinta. All rights reserved.
@@ -50,6 +50,12 @@ public extension TypographyFontTokenGeneratedMock {
     static func mocked(_ font: Font) -> TypographyFontTokenGeneratedMock {
         let fontToken = TypographyFontTokenGeneratedMock()
         fontToken.font = font
+        return fontToken
+    }
+
+    static func mocked(_ font: UIFont) -> TypographyFontTokenGeneratedMock {
+        let fontToken = TypographyFontTokenGeneratedMock()
+        fontToken.uiFont = font
         return fontToken
     }
 

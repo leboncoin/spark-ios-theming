@@ -1,13 +1,12 @@
 //
-//  ColorsGeneratedMock+public extensionTests.swift
-//  SparkCore
+//  ColorsGeneratedMock+ExtensionTests.swift
+//  SparkThemingTesting
 //
 //  Created by robin.lemaire on 11/04/2023.
 //  Copyright © 2023 Adevinta. All rights reserved.
 //
 
 @testable import SparkTheming
-import SparkTheming
 
 public extension ColorsGeneratedMock {
 
