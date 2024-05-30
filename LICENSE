@@ -1,41 +1,3 @@
-# Configuration
-
-## Introduction
-
-Spark is [Adevinta’s](https://www.adevinta.com/) iOS Design System.
-
-Its mission is to provide an easy to use, customizable UI experience for consumers.
-
-This repository contains a SPM (Swift Package Manager) to manage the theming of Spark.
-
-## Theming
-
-The Spark theming is composed by:
-- colors
-- border (radius & width)
-- elevation
-- layout (spacing)
-- typographies
-- dims
-
-## SPM
-
-To open the project on Xcode, you just need to double click on the ```Package.swift```.
-
-The SPM is composed by 
-- Targets :
-  - **SparkTheme**: Adevinta theming implementation
-  - **SparkTheming**: Theming protocols
-  - **SparkThemingTesting**: Public theming mocks
-
-- Unit Tests:
-  - **SparkThemeUnitTests**: Unit tests for the Theme target
-  - **SparkThemingUnitTests**: Unit tests for the Theming target
-
-
-## License
-
-```
 MIT License
 
 Copyright (c) 2024 Adevinta
@@ -57,4 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```
