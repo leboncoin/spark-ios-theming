@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SparkTheming
+@_spi(SI_SPI) @testable import SparkTheming
 import SwiftUI
 
 final class TextStyleTests: XCTestCase {

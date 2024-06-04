@@ -9,13 +9,17 @@
 import SparkTheming
 import Foundation
 
-struct SparkDims: Dims {
+public struct SparkDims: Dims {
 
     // MARK: - Properties
 
-    let dim1: CGFloat = 0.72
-    let dim2: CGFloat = 0.56
-    let dim3: CGFloat = 0.40
-    let dim4: CGFloat = 0.16
-    let dim5: CGFloat = 0.08
+    public let dim1: CGFloat = 0.72
+    public let dim2: CGFloat = 0.56
+    public let dim3: CGFloat = 0.40
+    public let dim4: CGFloat = 0.16
+    public let dim5: CGFloat = 0.08
+
+    // MARK: - Initialization
+
+    public init() {}
 }

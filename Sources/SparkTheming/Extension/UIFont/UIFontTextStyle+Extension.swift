@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIFont.TextStyle {
+@_spi(SI_SPI) public extension UIFont.TextStyle {
 
     // MARK: - Initialization
 

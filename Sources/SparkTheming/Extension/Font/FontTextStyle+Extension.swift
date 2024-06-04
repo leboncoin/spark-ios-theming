@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-extension Font.TextStyle {
+@_spi(SI_SPI) public extension Font.TextStyle {
 
     // MARK: - Initialization
 

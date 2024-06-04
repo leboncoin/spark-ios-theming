@@ -10,37 +10,50 @@ import UIKit
 import SwiftUI
 import SparkTheming
 
-struct SparkElevation: Elevation {
-    let dropShadow: ElevationDropShadows & ElevationShadow = SparkDropShadow()
+public struct SparkElevation: Elevation {
+
+    // MARK: - Properties
+    
+    public let dropShadow: ElevationDropShadows & ElevationShadow = SparkDropShadow()
+
+    // MARK: - Initialization
+
+    public init() {}
 }
 
-struct SparkDropShadow: ElevationDropShadows & ElevationShadow {
+public struct SparkDropShadow: ElevationDropShadows & ElevationShadow {
 
-    let small: ElevationShadow = ElevationShadowDefault(
+    // MARK: - Properties
+
+    public let small: ElevationShadow = ElevationShadowDefault(
         offset: .init(x: 0, y: 1),
         blur: 2,
         colorToken: SparkColorTokenShadow(),
         opacity: 0.20)
-    let medium: ElevationShadow = ElevationShadowDefault(
+    public let medium: ElevationShadow = ElevationShadowDefault(
         offset: .init(x: 0, y: 6),
         blur: 12,
         colorToken: SparkColorTokenShadow(),
         opacity: 0.20)
-    let large: ElevationShadow = ElevationShadowDefault(
+    public let large: ElevationShadow = ElevationShadowDefault(
         offset: .init(x: 0, y: 8),
         blur: 16,
         colorToken: SparkColorTokenShadow(),
         opacity: 0.20)
-    let extraLarge: ElevationShadow = ElevationShadowDefault(
+    public let extraLarge: ElevationShadow = ElevationShadowDefault(
         offset: .init(x: 0, y: 12),
         blur: 24,
         colorToken: SparkColorTokenShadow(),
         opacity: 0.20)
 
-    let offset: CGPoint = .init(x: 0, y: 4)
-    let blur: CGFloat = 8
-    let colorToken: any ColorToken = SparkColorTokenShadow()
-    let opacity: Float = 0.20
+    public let offset: CGPoint = .init(x: 0, y: 4)
+    public let blur: CGFloat = 8
+    public let colorToken: any ColorToken = SparkColorTokenShadow()
+    public let opacity: Float = 0.20
+
+    // MARK: - Initialization
+
+    public init() {}
 }
 
 fileprivate struct SparkColorTokenShadow: ColorToken {

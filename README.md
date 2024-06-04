@@ -32,6 +32,11 @@ The SPM is composed by
   - **SparkThemeUnitTests**: Unit tests for the Theme target
   - **SparkThemingUnitTests**: Unit tests for the Theming target
 
+## Guidelines
+
+There is two importants rules for this repository:
+- All ```protocols```, ```class```, ```struct```, ```var/let/func```, ..., used by on other spark repositories or consummer application must be in **```public```** or **```open```**.
+- If the code can be used only by the **spark iOS team**, all ```public``` or **```open```** must contains the **```@_spi(SI_SPI)```** annotation. If the code can also be used by consommer too, you don't need to add this annotation. 
 
 ## License
 

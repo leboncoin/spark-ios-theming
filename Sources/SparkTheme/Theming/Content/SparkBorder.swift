@@ -8,18 +8,22 @@
 
 import SparkTheming
 
-struct SparkBorder: Border {
+public struct SparkBorder: Border {
 
     // MARK: - Properties
 
-    let width: BorderWidth = BorderWidthDefault(
+    public let width: BorderWidth = BorderWidthDefault(
         small: 1,
         medium: 2
     )
-    let radius: BorderRadius = BorderRadiusDefault(
+    public let radius: BorderRadius = BorderRadiusDefault(
         small: 4,
         medium: 8,
         large: 16,
         xLarge: 24
     )
+
+    // MARK: - Initialization
+
+    public init() {}
 }

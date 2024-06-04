@@ -10,92 +10,96 @@ import SparkTheming
 import SwiftUI
 import UIKit
 
-struct SparkTypography: Typography {
+public struct SparkTypography: Typography {
 
     // MARK: - Properties
 
-    let display1: TypographyFontToken = TypographyFontTokenDefault(
+    public let display1: TypographyFontToken = TypographyFontTokenDefault(
         size: 40,
         isHighlighted: true,
         textStyle: .largeTitle
     )
-    let display2: TypographyFontToken = TypographyFontTokenDefault(
+    public let display2: TypographyFontToken = TypographyFontTokenDefault(
         size: 32,
         isHighlighted: true,
         textStyle: .largeTitle
     )
-    let display3: TypographyFontToken = TypographyFontTokenDefault(
+    public let display3: TypographyFontToken = TypographyFontTokenDefault(
         size: 24,
         isHighlighted: true,
         textStyle: .largeTitle
     )
 
-    let headline1: TypographyFontToken = TypographyFontTokenDefault(
+    public let headline1: TypographyFontToken = TypographyFontTokenDefault(
         size: 20,
         isHighlighted: true,
         textStyle: .headline
     )
-    let headline2: TypographyFontToken = TypographyFontTokenDefault(
+    public let headline2: TypographyFontToken = TypographyFontTokenDefault(
         size: 18,
         isHighlighted: true,
         textStyle: .headline
     )
 
-    let subhead: TypographyFontToken = TypographyFontTokenDefault(
+    public let subhead: TypographyFontToken = TypographyFontTokenDefault(
         size: 16,
         isHighlighted: true,
         textStyle: .subheadline
     )
 
-    let body1: TypographyFontToken = TypographyFontTokenDefault(
+    public let body1: TypographyFontToken = TypographyFontTokenDefault(
         size: 16,
         isHighlighted: false,
         textStyle: .body
     )
-    let body1Highlight: TypographyFontToken = TypographyFontTokenDefault(
+    public let body1Highlight: TypographyFontToken = TypographyFontTokenDefault(
         size: 16,
         isHighlighted: true,
         textStyle: .body
     )
 
-    let body2: TypographyFontToken = TypographyFontTokenDefault(
+    public let body2: TypographyFontToken = TypographyFontTokenDefault(
         size: 14,
         isHighlighted: false,
         textStyle: .body
     )
-    let body2Highlight: TypographyFontToken = TypographyFontTokenDefault(
+    public let body2Highlight: TypographyFontToken = TypographyFontTokenDefault(
         size: 14,
         isHighlighted: true,
         textStyle: .body
     )
 
-    let caption: TypographyFontToken = TypographyFontTokenDefault(
+    public let caption: TypographyFontToken = TypographyFontTokenDefault(
         size: 12,
         isHighlighted: false,
         textStyle: .caption
     )
-    let captionHighlight: TypographyFontToken = TypographyFontTokenDefault(
+    public let captionHighlight: TypographyFontToken = TypographyFontTokenDefault(
         size: 12,
         isHighlighted: true,
         textStyle: .caption
     )
 
-    let small: TypographyFontToken = TypographyFontTokenDefault(
+    public let small: TypographyFontToken = TypographyFontTokenDefault(
         size: 10,
         isHighlighted: false,
         textStyle: .footnote
     )
-    let smallHighlight: TypographyFontToken = TypographyFontTokenDefault(
+    public let smallHighlight: TypographyFontToken = TypographyFontTokenDefault(
         size: 10,
         isHighlighted: true,
         textStyle: .footnote
     )
 
-    let callout: TypographyFontToken = TypographyFontTokenDefault(
+    public let callout: TypographyFontToken = TypographyFontTokenDefault(
         size: 16,
         isHighlighted: true,
         textStyle: .callout
     )
+
+    // MARK: - Initialization
+
+    public init() {}
 }
 
 // MARK: - TypographyFont Extension
