@@ -12,10 +12,6 @@ import SwiftUI
 
 public struct SparkColors: Colors {
 
-    // MARK: - Class
-
-    private class ClassForBundle {}
-
     // MARK: - Properties
 
     public let main: ColorsMain = ColorsMainDefault(
