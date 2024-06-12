@@ -13,7 +13,7 @@ import SparkTheming
 public struct SparkElevation: Elevation {
 
     // MARK: - Properties
-    
+
     public let dropShadow: ElevationDropShadows & ElevationShadow = SparkDropShadow()
 
     // MARK: - Initialization
