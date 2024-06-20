@@ -25,19 +25,22 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SparkTheming"
+            name: "SparkTheming",
+            path: "Sources/Core"
         ),
         .target(
             name: "SparkThemingTesting",
             dependencies: [
                 "SparkTheming"
-            ]
+            ],
+            path: "Sources/Testing"
         ),
         .target(
             name: "SparkTheme",
             dependencies: [
                 "SparkTheming"
             ],
+            path: "Sources/Theme",
             resources: [
                 .process("Resources/")
             ]
@@ -47,7 +50,8 @@ let package = Package(
             dependencies: [
                 "SparkTheming",
                 "SparkThemingTesting"
-            ]
+            ],
+            path: "Tests/UnitTests"
         ),
         .testTarget(
             name: "SparkThemeUnitTests",
@@ -55,7 +59,8 @@ let package = Package(
                 "SparkTheme",
                 "SparkTheming",
                 "SparkThemingTesting"
-            ]
+            ],
+            path: "Tests/ThemeUnitTests"
         ),
     ]
 )
