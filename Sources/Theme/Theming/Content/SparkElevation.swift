@@ -25,31 +25,35 @@ public struct SparkDropShadow: ElevationDropShadows & ElevationShadow {
 
     // MARK: - Properties
 
-    public let small: ElevationShadow = ElevationShadowDefault(
+    public let small: any ElevationShadow = ElevationShadowDefault(
         offset: .init(x: 0, y: 1),
         blur: 2,
-        colorToken: SparkColorTokenShadow(),
-        opacity: 0.20)
-    public let medium: ElevationShadow = ElevationShadowDefault(
+        colorToken: ColorTokenDefault(named: "shadow", in: Bundle.module),
+        opacity: 0.5
+    )
+    public let medium: any ElevationShadow = ElevationShadowDefault(
         offset: .init(x: 0, y: 6),
         blur: 12,
-        colorToken: SparkColorTokenShadow(),
-        opacity: 0.20)
-    public let large: ElevationShadow = ElevationShadowDefault(
+        colorToken: ColorTokenDefault(named: "shadow", in: Bundle.module),
+        opacity: 0.5
+    )
+    public let large: any ElevationShadow = ElevationShadowDefault(
         offset: .init(x: 0, y: 8),
         blur: 16,
-        colorToken: SparkColorTokenShadow(),
-        opacity: 0.20)
-    public let extraLarge: ElevationShadow = ElevationShadowDefault(
+        colorToken: ColorTokenDefault(named: "shadow", in: Bundle.module),
+        opacity: 0.5
+    )
+    public let extraLarge: any ElevationShadow = ElevationShadowDefault(
         offset: .init(x: 0, y: 12),
         blur: 24,
-        colorToken: SparkColorTokenShadow(),
-        opacity: 0.20)
+        colorToken: ColorTokenDefault(named: "shadow", in: Bundle.module),
+        opacity: 0.5
+    )
 
     public let offset: CGPoint = .init(x: 0, y: 4)
     public let blur: CGFloat = 8
-    public let colorToken: any ColorToken = SparkColorTokenShadow()
-    public let opacity: Float = 0.20
+    public let colorToken: any ColorToken = ColorTokenDefault(named: "shadow", in: Bundle.module)
+    public let opacity: Float = 0.5
 
     // MARK: - Initialization
 
