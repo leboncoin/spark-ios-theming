@@ -27,21 +27,3 @@ public struct SparkTheme: Theme {
 
     private init() {}
 }
-
-public struct SparkProTheme: Theme {
-
-    // MARK: - Properties
-
-    public static var shared = Self()
-
-    public let border: Border = SparkBorder()
-    public let colors: Colors = SparkProColors()
-    public let elevation: Elevation = SparkElevation()
-    public let layout: Layout = SparkLayout()
-    public let typography: Typography = SparkTypography()
-    public let dims: Dims = SparkDims()
-
-    // MARK: - Initialization
-
-    private init() {}
-}
