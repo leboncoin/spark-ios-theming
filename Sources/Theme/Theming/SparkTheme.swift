@@ -25,5 +25,5 @@ public struct SparkTheme: Theme {
 
     // MARK: - Initialization
 
-    public init() {}
+    private init() {}
 }
