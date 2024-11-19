@@ -16,7 +16,7 @@ public extension UIView {
     /// - Parameter shadow: An ElevationShadow
     func applyShadow(_ shadow: ElevationShadow) {
         self.layer.masksToBounds = false
-        self.layer.shadowColor = shadow.colorToken.uiColor.cgColor
+        self.layer.shadowColor = shadow.colorToken.uiColor.resolvedColor(with: self.traitCollection).cgColor
         self.layer.shadowOpacity = shadow.opacity
         self.layer.shadowOffset = CGSize(width: shadow.offset.x, height: shadow.offset.y)
         self.layer.shadowRadius = shadow.blur
