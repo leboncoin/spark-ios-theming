@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Spark is [Adevinta’s](https://www.adevinta.com/) iOS Design System.
+Spark is [Leboncoin’s](https://www.leboncoin.com/) iOS Design System.
 
 Its mission is to provide an easy to use, customizable UI experience for consumers.
 
@@ -11,6 +11,7 @@ This repository contains a SPM (Swift Package Manager) to manage the theming of 
 ## Theming
 
 The Spark theming is composed by:
+
 - colors
 - border (radius & width)
 - elevation
@@ -20,11 +21,13 @@ The Spark theming is composed by:
 
 ## SPM
 
-To open the project on Xcode, you just need to double click on the ```Package.swift```.
+To open the project on Xcode, you just need to double click on the `Package.swift`.
 
-The SPM is composed by 
+The SPM is composed by
+
 - Targets :
-  - **SparkTheme**: Adevinta theming implementation
+
+  - **SparkTheme**: Leboncoin theming implementation
   - **SparkTheming**: Theming protocols
   - **SparkThemingTesting**: Public theming mocks
 
@@ -35,15 +38,16 @@ The SPM is composed by
 ## Guidelines
 
 There is two importants rules for this repository:
-- All ```protocols```, ```class```, ```struct```, ```var/let/func```, ..., used by on other spark repositories or consummer application must be in **```public```** or **```open```**.
-- If the code can be used only by the **spark iOS team**, all ```public``` or **```open```** must contains the **```@_spi(SI_SPI)```** annotation. If the code can also be used by consommer too, you don't need to add this annotation. 
+
+- All `protocols`, `class`, `struct`, `var/let/func`, ..., used by on other spark repositories or consummer application must be in **`public`** or **`open`**.
+- If the code can be used only by the **spark iOS team**, all `public` or **`open`** must contains the **`@_spi(SI_SPI)`** annotation. If the code can also be used by consommer too, you don't need to add this annotation.
 
 ## License
 
 ```
 MIT License
 
-Copyright (c) 2024 Adevinta
+Copyright (c) 2024 Leboncoin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
