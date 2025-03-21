@@ -3,7 +3,7 @@
 //  SparkTheming
 //
 //  Created by louis.borlee on 23/03/2023.
-//  Copyright © 2023 Adevinta. All rights reserved.
+//  Copyright © 2023 Leboncoin. All rights reserved.
 //
 
 public struct ColorsStatesDefault: ColorsStates {
