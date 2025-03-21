@@ -1,49 +1,83 @@
-# Configuration
+# Theming
 
-## Introduction
+**Spark** is the [Leboncoin](https://www.leboncoin.fr/)'s _Design System_.
 
-Spark is [Adevinta’s](https://www.adevinta.com/) iOS Design System.
+The repository here contains the Theming, the Spark Theme and the mock for the Theming.
 
-Its mission is to provide an easy to use, customizable UI experience for consumers.
+You can also see all of our Spark iOS repositories on [Github](https://github.com/orgs/leboncoin/repositories?q=spark-ios+sort%3Aname-asc).
 
-This repository contains a SPM (Swift Package Manager) to manage the theming of Spark.
+## Technical Documentation
 
-## Theming
+You are a developer ? A technical documentation in _DocC_ is available [here](https://leboncoin.github.io/spark-ios-theming/).
 
-The Spark theming is composed by:
-- colors
-- border (radius & width)
-- elevation
-- layout (spacing)
-- typographies
-- dims
+### Swift Package Manager
 
-## SPM
+_Note: Instructions below are for using **SPM** without the Xcode UI. It's the easiest to go to your Project Settings -> Swift Packages and add SparkTheming from there._
 
-To open the project on Xcode, you just need to double click on the ```Package.swift```.
+To integrate using Apple's Swift package manager, without Xcode integration, add the following as a dependency to your `Package.swift`:
 
-The SPM is composed by 
-- Targets :
-  - **SparkTheme**: Adevinta theming implementation
-  - **SparkTheming**: Theming protocols
-  - **SparkThemingTesting**: Public theming mocks
+```swift
+.package(url: "https://github.com/leboncoin/spark-ios-theming.git", .upToNextMajor(from: "1.0.0"))
+```
 
-- Unit Tests:
-  - **SparkThemeUnitTests**: Unit tests for the Theme target
-  - **SparkThemingUnitTests**: Unit tests for the Theming target
+and then specify `SparkTheming` as a dependency of the Target in which you wish to use the SparkTheming.
 
-## Guidelines
+Here's an example `Package.swift`:
 
-There is two importants rules for this repository:
-- All ```protocols```, ```class```, ```struct```, ```var/let/func```, ..., used by on other spark repositories or consummer application must be in **```public```** or **```open```**.
-- If the code can be used only by the **spark iOS team**, all ```public``` or **```open```** must contains the **```@_spi(SI_SPI)```** annotation. If the code can also be used by consommer too, you don't need to add this annotation. 
+```swift
+// swift-tools-version:5.9
+import PackageDescription
+
+let package = Package(
+    name: "MyPackage",
+    platforms: [
+        .iOS(.v16)
+    ],
+    products: [
+        .library(
+            name: "MyPackage",
+            targets: ["MyPackage"]),
+    ],
+    dependencies: [
+        .package(
+            url: "https://github.com/leboncoin/spark-ios-theming.git",
+            .upToNextMajor(from: "1.0.0")
+        )
+    ],
+    targets: [
+        .target(
+            name: "MyPackage",
+            dependencies: [
+                .product(
+                    name: "SparkTheming", // Theming protocols
+                    package: "spark-ios-theming"
+                ),
+                .product(
+                    name: "SparkTheme", // Leboncoin theming implementation
+                    package: "spark-ios-theming"
+                ),
+        )
+        .testTarget(
+            name: "MyPackageUnitTests",
+            dependencies: [
+                "MyPackage",
+                .product(
+                    name: "SparkThemingTesting", // Public theming mocks
+                    package: "spark-ios-theming"
+                )
+            ],
+            path: "Tests/UnitTests"
+        ),
+    ]
+)
+```
 
 ## License
 
 ```
 MIT License
 
-Copyright (c) 2024 Adevinta
+Copyright (c) 2024 Leboncoin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
