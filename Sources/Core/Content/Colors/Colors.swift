@@ -41,7 +41,7 @@ public extension ColorToken {
         return self.color == other.color && self.uiColor == other.uiColor
     }
 
-    static func == (lhs: any ColorToken, rhs: any ColorToken) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.equals(rhs)
     }
 }
