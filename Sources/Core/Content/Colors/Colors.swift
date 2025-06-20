@@ -59,9 +59,12 @@ public extension ColorToken {
     }
 }
 
-fileprivate struct ColorTokenClear: ColorToken {
-    var uiColor: UIColor { .clear }
-    var color: Color { .clear }
+@_spi(SI_SPI) public struct ColorTokenClear: ColorToken {
+    public var uiColor: UIColor { .clear }
+    public var color: Color { .clear }
+
+    public init() {
+    }
 }
 
 public extension ColorToken {
