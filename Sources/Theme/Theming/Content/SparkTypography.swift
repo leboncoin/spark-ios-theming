@@ -120,10 +120,10 @@ private extension TypographyFontTokenDefault {
         isHighlighted: Bool,
         textStyle: TextStyle
     ) {
-        // Properties
-        let fontName = isHighlighted ? Constants.boldFontName : Constants.regularFontName
         self.init(
-            named: fontName,
+            isHighlighted: isHighlighted,
+            regularFontName: Constants.regularFontName,
+            boldFontName: Constants.boldFontName,
             size: size,
             textStyle: textStyle
         )
