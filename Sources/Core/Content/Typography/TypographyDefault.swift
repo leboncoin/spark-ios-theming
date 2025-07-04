@@ -75,11 +75,19 @@ public struct TypographyDefault: Typography {
 
 public struct TypographyFontTokenDefault: TypographyFontToken {
 
-    // MARK: - Properties
+    // MARK: - Private Properties
 
-    private let fontName: String
+    private let isHighlighted: Bool
+    private let regularFontName: String
+    private let boldFontName: String
     private let fontSize: CGFloat
     private let fontTextStyle: TextStyle
+
+    private var fontName: String {
+        (self.isHighlighted || UIAccessibility.isBoldTextEnabled) ? self.boldFontName : self.regularFontName
+    }
+
+    // MARK: - Public Properties
 
     public var uiFont: UIFont {
         guard let font = UIFont(name: self.fontName, size: self.fontSize) else {
@@ -98,10 +106,28 @@ public struct TypographyFontTokenDefault: TypographyFontToken {
 
     // MARK: - Initialization
 
-    public init(named fontName: String,
-                size: CGFloat,
-                textStyle: TextStyle) {
-        self.fontName = fontName
+    public init(
+        named fontName: String,
+        size: CGFloat,
+        textStyle: TextStyle
+    ) {
+        self.regularFontName = fontName
+        self.boldFontName = fontName
+        self.isHighlighted = false
+        self.fontSize = size
+        self.fontTextStyle = textStyle
+    }
+
+    public init(
+        isHighlighted: Bool,
+        regularFontName: String,
+        boldFontName: String,
+        size: CGFloat,
+        textStyle: TextStyle
+    ) {
+        self.isHighlighted = isHighlighted
+        self.regularFontName = regularFontName
+        self.boldFontName = boldFontName
         self.fontSize = size
         self.fontTextStyle = textStyle
     }
