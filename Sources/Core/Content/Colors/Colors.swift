@@ -60,8 +60,8 @@ public extension ColorToken {
 }
 
 @_spi(SI_SPI) public struct ColorTokenClear: ColorToken {
-    public var uiColor: UIColor { .clear }
-    public var color: Color { .clear }
+    public let uiColor: UIColor = .clear
+    public let color: Color = .clear
 
     public init() {
     }

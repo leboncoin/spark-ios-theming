@@ -22,4 +22,9 @@ public extension Dims {
     var none: CGFloat {
         return 1.0
     }
+
+    /// None corresponding to 0 value
+    var full: CGFloat {
+        return 0
+    }
 }
