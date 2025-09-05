@@ -13,46 +13,46 @@ public struct TypographyDefault: Typography {
 
     // MARK: - Properties
 
-    public let display1: TypographyFontToken
-    public let display2: TypographyFontToken
-    public let display3: TypographyFontToken
+    public let display1: any TypographyFontToken
+    public let display2: any TypographyFontToken
+    public let display3: any TypographyFontToken
 
-    public let headline1: TypographyFontToken
-    public let headline2: TypographyFontToken
+    public let headline1: any TypographyFontToken
+    public let headline2: any TypographyFontToken
 
-    public let subhead: TypographyFontToken
+    public let subhead: any TypographyFontToken
 
-    public let body1: TypographyFontToken
-    public let body1Highlight: TypographyFontToken
+    public let body1: any TypographyFontToken
+    public let body1Highlight: any TypographyFontToken
 
-    public let body2: TypographyFontToken
-    public let body2Highlight: TypographyFontToken
+    public let body2: any TypographyFontToken
+    public let body2Highlight: any TypographyFontToken
 
-    public let caption: TypographyFontToken
-    public let captionHighlight: TypographyFontToken
+    public let caption: any TypographyFontToken
+    public let captionHighlight: any TypographyFontToken
 
-    public let small: TypographyFontToken
-    public let smallHighlight: TypographyFontToken
+    public let small: any TypographyFontToken
+    public let smallHighlight: any TypographyFontToken
 
-    public let callout: TypographyFontToken
+    public let callout: any TypographyFontToken
 
     // MARK: - Initialization
 
-    public init(display1: TypographyFontToken,
-                display2: TypographyFontToken,
-                display3: TypographyFontToken,
-                headline1: TypographyFontToken,
-                headline2: TypographyFontToken,
-                subhead: TypographyFontToken,
-                body1: TypographyFontToken,
-                body1Highlight: TypographyFontToken,
-                body2: TypographyFontToken,
-                body2Highlight: TypographyFontToken,
-                caption: TypographyFontToken,
-                captionHighlight: TypographyFontToken,
-                small: TypographyFontToken,
-                smallHighlight: TypographyFontToken,
-                callout: TypographyFontToken) {
+    public init(display1: any TypographyFontToken,
+                display2: any TypographyFontToken,
+                display3: any TypographyFontToken,
+                headline1: any TypographyFontToken,
+                headline2: any TypographyFontToken,
+                subhead: any TypographyFontToken,
+                body1: any TypographyFontToken,
+                body1Highlight: any TypographyFontToken,
+                body2: any TypographyFontToken,
+                body2Highlight: any TypographyFontToken,
+                caption: any TypographyFontToken,
+                captionHighlight: any TypographyFontToken,
+                small: any TypographyFontToken,
+                smallHighlight: any TypographyFontToken,
+                callout: any TypographyFontToken) {
         self.display1 = display1
         self.display2 = display2
         self.display3 = display3

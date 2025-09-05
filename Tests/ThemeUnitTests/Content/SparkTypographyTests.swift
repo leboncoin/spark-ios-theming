@@ -12,7 +12,7 @@ import SparkTheming
 
 final class SparkTypographyTests: XCTestCase {
 
-    private lazy var tokens: [SparkTheming.TypographyFontToken] = self.getAllTypographyFontTokens()
+    private lazy var tokens: [any TypographyFontToken] = self.getAllTypographyFontTokens()
 
     func testUIFonts() {
         self.tokens.forEach {
@@ -29,17 +29,17 @@ final class SparkTypographyTests: XCTestCase {
     }
 
     // MARK: - Get Fonts
-    private func getAllTypographyFontTokens() -> [SparkTheming.TypographyFontToken] {
+    private func getAllTypographyFontTokens() -> [any TypographyFontToken] {
         let mirror = Mirror(reflecting: SparkTypography())
         return mirror.children.flatMap { (_, value: Any) in
             return self.getTypographyFontTokens(from: value)
         }
     }
 
-    private func getTypographyFontTokens(from object: Any) -> [SparkTheming.TypographyFontToken] {
+    private func getTypographyFontTokens(from object: Any) -> [any TypographyFontToken] {
         let mirror = Mirror(reflecting: object)
         return mirror.children.compactMap { (label: String?, value: Any) in
-            return value as? SparkTheming.TypographyFontToken
+            return value as? any TypographyFontToken
         }
     }
 }
