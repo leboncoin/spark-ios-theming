@@ -19,14 +19,15 @@ public struct ElevationShadowDefault: ElevationShadow {
 
     // MARK: - Init
 
-    public init(offset: CGPoint,
-                blur: CGFloat,
-                colorToken: any ColorToken,
-                opacity: Float) {
+    public init(
+        offset: CGPoint,
+        blur: CGFloat,
+        colorToken: any ColorToken,
+        opacity: Float
+    ) {
         self.offset = offset
         self.blur = blur
         self.colorToken = colorToken
         self.opacity = opacity
     }
 }
-

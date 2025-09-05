@@ -14,7 +14,7 @@ public struct SparkColors: Colors {
 
     // MARK: - Properties
 
-    public let main: ColorsMain = ColorsMainDefault(
+    public let main: any ColorsMain = ColorsMainDefault(
         main: ColorTokenDefault(named: "main", in: .module),
         onMain: ColorTokenDefault(named: "on-main", in: .module),
         mainVariant: ColorTokenDefault(named: "main-variant", in: .module),
@@ -22,7 +22,7 @@ public struct SparkColors: Colors {
         mainContainer: ColorTokenDefault(named: "main-container", in: .module),
         onMainContainer: ColorTokenDefault(named: "on-main-container", in: .module))
 
-    public let support: ColorsSupport = ColorsSupportDefault(
+    public let support: any ColorsSupport = ColorsSupportDefault(
         support: ColorTokenDefault(named: "support", in: .module),
         onSupport: ColorTokenDefault(named: "on-support", in: .module),
         supportVariant: ColorTokenDefault(named: "support-variant", in: .module),
@@ -30,7 +30,7 @@ public struct SparkColors: Colors {
         supportContainer: ColorTokenDefault(named: "support-container", in: .module),
         onSupportContainer: ColorTokenDefault(named: "on-support-container", in: .module))
 
-    public let accent: ColorsAccent = ColorsAccentDefault(
+    public let accent: any ColorsAccent = ColorsAccentDefault(
         accent: ColorTokenDefault(named: "accent", in: .module),
         onAccent: ColorTokenDefault(named: "on-accent", in: .module),
         accentVariant: ColorTokenDefault(named: "accent-variant", in: .module),
@@ -38,13 +38,13 @@ public struct SparkColors: Colors {
         accentContainer: ColorTokenDefault(named: "accent-container", in: .module),
         onAccentContainer: ColorTokenDefault(named: "on-accent-container", in: .module))
 
-    public let basic: ColorsBasic = ColorsBasicDefault(
+    public let basic: any ColorsBasic = ColorsBasicDefault(
         basic: ColorTokenDefault(named: "basic", in: .module),
         onBasic: ColorTokenDefault(named: "on-basic", in: .module),
         basicContainer: ColorTokenDefault(named: "basic-container", in: .module),
         onBasicContainer: ColorTokenDefault(named: "on-basic-container", in: .module))
 
-    public let base: ColorsBase = ColorsBaseDefault(
+    public let base: any ColorsBase = ColorsBaseDefault(
         background: ColorTokenDefault(named: "background", in: .module),
         onBackground: ColorTokenDefault(named: "on-background", in: .module),
         backgroundVariant: ColorTokenDefault(named: "background-variant", in: .module),
@@ -58,7 +58,7 @@ public struct SparkColors: Colors {
         overlay: ColorTokenDefault(named: "overlay", in: .module),
         onOverlay: ColorTokenDefault(named: "on-overlay", in: .module))
 
-    public let feedback: ColorsFeedback = ColorsFeedbackDefault(
+    public let feedback: any ColorsFeedback = ColorsFeedbackDefault(
         success: ColorTokenDefault(named: "success", in: .module),
         onSuccess: ColorTokenDefault(named: "on-success", in: .module),
         successContainer: ColorTokenDefault(named: "success-container", in: .module),
@@ -81,7 +81,7 @@ public struct SparkColors: Colors {
         onNeutralContainer: ColorTokenDefault(named: "on-neutral-container", in: .module)
     )
 
-    public let states: ColorsStates = ColorsStatesDefault(
+    public let states: any ColorsStates = ColorsStatesDefault(
         mainPressed: ColorTokenDefault(named: "main-pressed", in: .module),
         mainVariantPressed: ColorTokenDefault(named: "main-variant-pressed", in: .module),
         mainContainerPressed: ColorTokenDefault(named: "main-container-pressed", in: .module),

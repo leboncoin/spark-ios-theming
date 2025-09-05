@@ -12,41 +12,25 @@ public struct LayoutDefault: Layout {
 
     // MARK: - Properties
 
-    public let spacing: LayoutSpacing
+    public let spacing: any LayoutSpacing
 
     // MARK: - Initialization
 
-    public init(spacing: LayoutSpacing) {
+    public init(spacing: any LayoutSpacing) {
         self.spacing = spacing
     }
 }
 
-// MARK: - Spacing
+// MARK: - Hashable & Equatable
 
-public struct LayoutSpacingDefault: LayoutSpacing {
+public extension LayoutDefault {
 
-    // MARK: - Properties
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.spacing)
+    }
 
-    public let small: CGFloat
-    public let medium: CGFloat
-    public let large: CGFloat
-    public let xLarge: CGFloat
-    public let xxLarge: CGFloat
-    public let xxxLarge: CGFloat
-
-    // MARK: - Initialization
-
-    public init(small: CGFloat,
-                medium: CGFloat,
-                large: CGFloat,
-                xLarge: CGFloat,
-                xxLarge: CGFloat,
-                xxxLarge: CGFloat) {
-        self.small = small
-        self.medium = medium
-        self.large = large
-        self.xLarge = xLarge
-        self.xxLarge = xxLarge
-        self.xxxLarge = xxxLarge
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.spacing.equals(rhs.spacing)
     }
 }
+

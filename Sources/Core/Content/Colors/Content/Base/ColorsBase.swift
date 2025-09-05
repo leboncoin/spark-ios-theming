@@ -7,7 +7,7 @@
 //
 
 // sourcery: AutoMockable
-public protocol ColorsBase {
+public protocol ColorsBase: Hashable, Equatable {
 
     // MARK: - Background
 
@@ -33,3 +33,52 @@ public protocol ColorsBase {
     var overlay: any ColorToken { get }
     var onOverlay: any ColorToken { get }
 }
+
+// MARK: - Hashable & Equatable
+
+public extension ColorsBase {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.background)
+        hasher.combine(self.onBackground)
+        hasher.combine(self.backgroundVariant)
+        hasher.combine(self.onBackgroundVariant)
+
+        hasher.combine(self.surface)
+        hasher.combine(self.onSurface)
+        hasher.combine(self.surfaceInverse)
+        hasher.combine(self.onSurfaceInverse)
+
+        hasher.combine(self.outline)
+        hasher.combine(self.outlineHigh)
+
+        hasher.combine(self.overlay)
+        hasher.combine(self.onOverlay)
+    }
+
+    func equals(_ other: any ColorsBase) -> Bool {
+        return self.background.equals(other.background) &&
+        self.onBackground.equals(other.onBackground) &&
+        self.backgroundVariant.equals(other.backgroundVariant) &&
+        self.onBackgroundVariant.equals(other.onBackgroundVariant) &&
+
+        self.surface.equals(other.surface) &&
+        self.onSurface.equals(other.onSurface) &&
+        self.surfaceInverse.equals(other.surfaceInverse) &&
+        self.onSurfaceInverse.equals(other.onSurfaceInverse) &&
+
+        self.outline.equals(other.outline) &&
+        self.outlineHigh.equals(other.outlineHigh) &&
+
+        self.overlay.equals(other.overlay) &&
+        self.onOverlay.equals(other.onOverlay) &&
+
+        self.background.equals(other.background) &&
+        self.onBackground.equals(other.onBackground)
+    }
+
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.equals(rhs)
+    }
+}
+

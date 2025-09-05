@@ -16,15 +16,17 @@ public struct ColorsMainDefault: ColorsMain {
     public let onMainVariant: any ColorToken
     public let mainContainer: any ColorToken
     public let onMainContainer: any ColorToken
-
+    
     // MARK: - Init
-
-    public init(main: any ColorToken,
-                onMain: any ColorToken,
-                mainVariant: any ColorToken,
-                onMainVariant: any ColorToken,
-                mainContainer: any ColorToken,
-                onMainContainer: any ColorToken) {
+    
+    public init(
+        main: any ColorToken,
+        onMain: any ColorToken,
+        mainVariant: any ColorToken,
+        onMainVariant: any ColorToken,
+        mainContainer: any ColorToken,
+        onMainContainer: any ColorToken
+    ) {
         self.main = main
         self.onMain = onMain
         self.mainVariant = mainVariant

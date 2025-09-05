@@ -7,9 +7,9 @@
 //
 
 public struct ColorsBaseDefault: ColorsBase {
-
+    
     // MARK: - Properties
-
+    
     public let background: any ColorToken
     public let onBackground: any ColorToken
     public let backgroundVariant: any ColorToken
@@ -22,21 +22,23 @@ public struct ColorsBaseDefault: ColorsBase {
     public let outlineHigh: any ColorToken
     public let overlay: any ColorToken
     public let onOverlay: any ColorToken
-
+    
     // MARK: - Init
-
-    public init(background: any ColorToken,
-                onBackground: any ColorToken,
-                backgroundVariant: any ColorToken,
-                onBackgroundVariant: any ColorToken,
-                surface: any ColorToken,
-                onSurface: any ColorToken,
-                surfaceInverse: any ColorToken,
-                onSurfaceInverse: any ColorToken,
-                outline: any ColorToken,
-                outlineHigh: any ColorToken,
-                overlay: any ColorToken,
-                onOverlay: any ColorToken) {
+    
+    public init(
+        background: any ColorToken,
+        onBackground: any ColorToken,
+        backgroundVariant: any ColorToken,
+        onBackgroundVariant: any ColorToken,
+        surface: any ColorToken,
+        onSurface: any ColorToken,
+        surfaceInverse: any ColorToken,
+        onSurfaceInverse: any ColorToken,
+        outline: any ColorToken,
+        outlineHigh: any ColorToken,
+        overlay: any ColorToken,
+        onOverlay: any ColorToken
+    ) {
         self.background = background
         self.onBackground = onBackground
         self.backgroundVariant = backgroundVariant

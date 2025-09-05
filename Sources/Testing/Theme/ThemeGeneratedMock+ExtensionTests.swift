@@ -12,12 +12,12 @@ public extension ThemeGeneratedMock {
     static func mocked() -> ThemeGeneratedMock {
         let theme = ThemeGeneratedMock()
 
+        theme.border = BorderGeneratedMock.mocked()
         theme.colors = ColorsGeneratedMock.mocked()
+        theme.elevation = ElevationGeneratedMock.mocked()
         theme.layout = LayoutGeneratedMock.mocked()
         theme.typography = TypographyGeneratedMock.mocked()
-
         theme.dims = DimsGeneratedMock.mocked()
-        theme.border = BorderGeneratedMock.mocked()
 
         return theme
     }

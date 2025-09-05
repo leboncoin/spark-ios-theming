@@ -10,17 +10,19 @@ public struct ElevationDropShadowsDefault: ElevationDropShadows {
 
     // MARK: - Properties
 
-    public let small: ElevationShadow
-    public let medium: ElevationShadow
-    public let large: ElevationShadow
-    public let extraLarge: ElevationShadow
+    public let small: any ElevationShadow
+    public let medium: any ElevationShadow
+    public let large: any ElevationShadow
+    public let extraLarge: any ElevationShadow
 
     // MARK: - Init
 
-    public init(small: ElevationShadow,
-                medium: ElevationShadow,
-                large: ElevationShadow,
-                extraLarge: ElevationShadow) {
+    public init(
+        small: any ElevationShadow,
+        medium: any ElevationShadow,
+        large: any ElevationShadow,
+        extraLarge: any ElevationShadow
+    ) {
         self.small = small
         self.medium = medium
         self.large = large

@@ -14,14 +14,16 @@ public struct SparkElevation: Elevation {
 
     // MARK: - Properties
 
-    public let dropShadow: ElevationDropShadows & ElevationShadow = SparkDropShadow()
+    public let dropShadow: any (ElevationDropShadows & ElevationShadow) = SparkDropShadow()
 
     // MARK: - Initialization
 
     public init() {}
 }
 
-public struct SparkDropShadow: ElevationDropShadows & ElevationShadow {
+// MARK: - Drop Shadow
+
+public struct SparkDropShadow: ElevationDropShadows & ElevationShadow, Equatable, Hashable {
 
     // MARK: - Properties
 
@@ -59,6 +61,40 @@ public struct SparkDropShadow: ElevationDropShadows & ElevationShadow {
 
     public init() {}
 }
+
+// MARK: - Hashable & Equatable
+
+public extension SparkDropShadow {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.small)
+        hasher.combine(self.medium)
+        hasher.combine(self.large)
+        hasher.combine(self.extraLarge)
+        hasher.combine(self.offset.y)
+        hasher.combine(self.offset.x)
+        hasher.combine(self.blur)
+        hasher.combine(self.colorToken)
+        hasher.combine(self.opacity)
+    }
+
+    func equals(_ other: SparkDropShadow) -> Bool {
+        return self.small.equals(other.small) &&
+        self.medium.equals(other.medium) &&
+        self.large.equals(other.large) &&
+        self.extraLarge.equals(other.extraLarge) &&
+        self.offset == other.offset &&
+        self.blur == other.blur &&
+        self.colorToken.equals(other.colorToken) &&
+        self.opacity == other.opacity
+    }
+
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.equals(rhs)
+    }
+}
+
+// MARK: - Private Token
 
 fileprivate struct SparkColorTokenShadow: ColorToken {
     var uiColor: UIColor { .black }

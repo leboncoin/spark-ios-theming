@@ -12,82 +12,41 @@ import SwiftUI
 // MARK: - Colors
 
 // sourcery: AutoMockable
-public protocol Colors {
-    var main: ColorsMain { get }
-    var support: ColorsSupport { get }
-    var accent: ColorsAccent { get }
-    var basic: ColorsBasic { get }
-    var base: ColorsBase { get }
-    var feedback: ColorsFeedback { get }
-    var states: ColorsStates { get }
+public protocol Colors: Hashable, Equatable {
+    var main: any ColorsMain { get }
+    var support: any ColorsSupport { get }
+    var accent: any ColorsAccent { get }
+    var basic: any ColorsBasic { get }
+    var base: any ColorsBase { get }
+    var feedback: any ColorsFeedback { get }
+    var states: any ColorsStates { get }
 }
 
-// MARK: - Token
+// MARK: - Hashable & Equatable
 
-// sourcery: AutoMockable
-public protocol ColorToken: Hashable, Equatable {
-    var uiColor: UIColor { get }
-    var color: Color { get }
-}
+public extension Colors {
 
-// Hashable & Equatable
-public extension ColorToken {
     func hash(into hasher: inout Hasher) {
-        hasher.combine(self.color)
-        hasher.combine(self.uiColor)
+        hasher.combine(self.main)
+        hasher.combine(self.support)
+        hasher.combine(self.accent)
+        hasher.combine(self.basic)
+        hasher.combine(self.base)
+        hasher.combine(self.feedback)
+        hasher.combine(self.states)
     }
 
-    func equals(_ other: any ColorToken) -> Bool {
-        return self.color == other.color && self.uiColor == other.uiColor
+    func equals(_ other: any Colors) -> Bool {
+        return self.main.equals(other.main) &&
+        self.support.equals(other.support) &&
+        self.accent.equals(other.accent) &&
+        self.basic.equals(other.basic) &&
+        self.base.equals(other.base) &&
+        self.feedback.equals(other.feedback) &&
+        self.states.equals(other.states)
     }
 
     static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.equals(rhs)
-    }
-}
-
-public extension Optional where Wrapped == any ColorToken {
-
-    func equals(_ other: (any ColorToken)?) -> Bool {
-        return self?.color == other?.color && self?.uiColor == other?.uiColor
-    }
-}
-
-public extension ColorToken {
-    static var clear: any ColorToken {
-        return ColorTokenClear()
-    }
-}
-
-@_spi(SI_SPI) public struct ColorTokenClear: ColorToken {
-    public let uiColor: UIColor = .clear
-    public let color: Color = .clear
-
-    public init() {
-    }
-}
-
-public extension ColorToken {
-
-    func opacity(_ opacity: CGFloat) -> any ColorToken {
-        return OpacityColorToken(colorToken: self,
-                                 opacity: opacity)
-    }
-}
-
-fileprivate struct OpacityColorToken: ColorToken {
-    static func == (lhs: OpacityColorToken, rhs: OpacityColorToken) -> Bool {
-        return lhs.colorToken.equals(rhs.colorToken) &&
-        lhs.opacity == rhs.opacity
-    }
-
-    let colorToken: any ColorToken
-    let opacity: CGFloat
-
-    var uiColor: UIColor {
-        return self.colorToken.uiColor.withAlphaComponent(self.opacity)
-    }
-    var color: Color {
-        return self.colorToken.color.opacity(self.opacity)
     }
 }

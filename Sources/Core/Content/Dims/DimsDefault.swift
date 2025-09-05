@@ -20,11 +20,13 @@ public struct DimsDefault: Dims {
 
     // MARK: - Init
 
-    public init(dim1: CGFloat,
-                dim2: CGFloat,
-                dim3: CGFloat,
-                dim4: CGFloat,
-                dim5: CGFloat) {
+    public init(
+        dim1: CGFloat,
+        dim2: CGFloat,
+        dim3: CGFloat,
+        dim4: CGFloat,
+        dim5: CGFloat
+    ) {
         self.dim1 = dim1
         self.dim2 = dim2
         self.dim3 = dim3
