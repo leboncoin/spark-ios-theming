@@ -19,12 +19,14 @@ public struct ColorsAccentDefault: ColorsAccent {
 
     // MARK: - Init
 
-    public init(accent: any ColorToken,
-                onAccent: any ColorToken,
-                accentVariant: any ColorToken,
-                onAccentVariant: any ColorToken,
-                accentContainer: any ColorToken,
-                onAccentContainer: any ColorToken) {
+    public init(
+        accent: any ColorToken,
+        onAccent: any ColorToken,
+        accentVariant: any ColorToken,
+        onAccentVariant: any ColorToken,
+        accentContainer: any ColorToken,
+        onAccentContainer: any ColorToken
+    ) {
         self.accent = accent
         self.onAccent = onAccent
         self.accentVariant = accentVariant

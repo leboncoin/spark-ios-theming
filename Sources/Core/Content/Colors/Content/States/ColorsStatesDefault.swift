@@ -36,29 +36,31 @@ public struct ColorsStatesDefault: ColorsStates {
 
     // MARK: - Init
 
-    public init(mainPressed: any ColorToken,
-                mainVariantPressed: any ColorToken,
-                mainContainerPressed: any ColorToken,
-                supportPressed: any ColorToken,
-                supportVariantPressed: any ColorToken,
-                supportContainerPressed: any ColorToken,
-                accentPressed: any ColorToken,
-                accentVariantPressed: any ColorToken,
-                accentContainerPressed: any ColorToken,
-                basicPressed: any ColorToken,
-                basicContainerPressed: any ColorToken,
-                surfacePressed: any ColorToken,
-                surfaceInversePressed: any ColorToken,
-                successPressed: any ColorToken,
-                successContainerPressed: any ColorToken,
-                alertPressed: any ColorToken,
-                alertContainerPressed: any ColorToken,
-                errorPressed: any ColorToken,
-                errorContainerPressed: any ColorToken,
-                infoPressed: any ColorToken,
-                infoContainerPressed: any ColorToken,
-                neutralPressed: any ColorToken,
-                neutralContainerPressed: any ColorToken) {
+    public init(
+        mainPressed: any ColorToken,
+        mainVariantPressed: any ColorToken,
+        mainContainerPressed: any ColorToken,
+        supportPressed: any ColorToken,
+        supportVariantPressed: any ColorToken,
+        supportContainerPressed: any ColorToken,
+        accentPressed: any ColorToken,
+        accentVariantPressed: any ColorToken,
+        accentContainerPressed: any ColorToken,
+        basicPressed: any ColorToken,
+        basicContainerPressed: any ColorToken,
+        surfacePressed: any ColorToken,
+        surfaceInversePressed: any ColorToken,
+        successPressed: any ColorToken,
+        successContainerPressed: any ColorToken,
+        alertPressed: any ColorToken,
+        alertContainerPressed: any ColorToken,
+        errorPressed: any ColorToken,
+        errorContainerPressed: any ColorToken,
+        infoPressed: any ColorToken,
+        infoContainerPressed: any ColorToken,
+        neutralPressed: any ColorToken,
+        neutralContainerPressed: any ColorToken
+    ) {
         self.mainPressed = mainPressed
         self.mainVariantPressed = mainVariantPressed
         self.mainContainerPressed = mainContainerPressed

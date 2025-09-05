@@ -12,55 +12,16 @@ public struct BorderDefault: Border {
 
     // MARK: - Properties
 
-    public let width: BorderWidth
-    public let radius: BorderRadius
+    public let width: any BorderWidth
+    public let radius: any BorderRadius
 
     // MARK: - Initialization
 
-    public init(width: BorderWidth, radius: BorderRadius) {
+    public init(
+        width: any BorderWidth,
+        radius: any BorderRadius
+    ) {
         self.width = width
         self.radius = radius
-    }
-}
-
-// MARK: - Width
-
-public struct BorderWidthDefault: BorderWidth {
-
-    // MARK: - Properties
-
-    public let small: CGFloat
-    public let medium: CGFloat
-
-    // MARK: - Initialization
-
-    public init(small: CGFloat,
-                medium: CGFloat) {
-        self.small = small
-        self.medium = medium
-    }
-}
-
-// MARK: - Radius
-
-public struct BorderRadiusDefault: BorderRadius {
-
-    // MARK: - Properties
-
-    public let small: CGFloat
-    public let medium: CGFloat
-    public let large: CGFloat
-    public let xLarge: CGFloat
-
-    // MARK: - Initialization
-
-    public init(small: CGFloat,
-                medium: CGFloat,
-                large: CGFloat,
-                xLarge: CGFloat) {
-        self.small = small
-        self.medium = medium
-        self.large = large
-        self.xLarge = xLarge
     }
 }

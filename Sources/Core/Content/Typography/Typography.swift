@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 // sourcery: AutoMockable
-public protocol Typography {
+public protocol Typography: Hashable, Equatable {
     var display1: any TypographyFontToken { get }
     var display2: any TypographyFontToken { get }
     var display3: any TypographyFontToken { get }
@@ -35,23 +35,58 @@ public protocol Typography {
     var callout: any TypographyFontToken { get }
 }
 
-// MARK: - Token
+// MARK: - Hashable & Equatable
 
-// sourcery: AutoMockable
-public protocol TypographyFontToken: Hashable, Equatable {
-    var uiFont: UIFont { get }
-    var font: Font { get }
-}
+public extension Typography {
 
-// Hashable & Equatable
-public extension TypographyFontToken {
     func hash(into hasher: inout Hasher) {
-        hasher.combine(self.font)
-        hasher.combine(self.uiFont)
+        hasher.combine(self.display1)
+        hasher.combine(self.display2)
+        hasher.combine(self.display3)
+
+        hasher.combine(self.headline1)
+        hasher.combine(self.headline2)
+
+        hasher.combine(self.subhead)
+
+        hasher.combine(self.body1)
+        hasher.combine(self.body1Highlight)
+
+        hasher.combine(self.body2)
+        hasher.combine(self.body2Highlight)
+
+        hasher.combine(self.caption)
+        hasher.combine(self.captionHighlight)
+
+        hasher.combine(self.small)
+        hasher.combine(self.smallHighlight)
+
+        hasher.combine(self.callout)
     }
 
-    func equals(_ other: any TypographyFontToken) -> Bool {
-        return self.font == other.font && self.uiFont == other.uiFont
+    func equals(_ other: any Typography) -> Bool {
+        return self.display1.equals(other.display1) &&
+        self.display2.equals(other.display2) &&
+        self.display3.equals(other.display3) &&
+
+        self.headline1.equals(other.headline1) &&
+        self.headline2.equals(other.headline2) &&
+
+        self.subhead.equals(other.subhead) &&
+
+        self.body1.equals(other.body1) &&
+        self.body1Highlight.equals(other.body1Highlight) &&
+
+        self.body2.equals(other.body2) &&
+        self.body2Highlight.equals(other.body2Highlight) &&
+
+        self.caption.equals(other.caption) &&
+        self.captionHighlight.equals(other.captionHighlight) &&
+
+        self.small.equals(other.small) &&
+        self.smallHighlight.equals(other.smallHighlight) &&
+
+        self.callout.equals(other.callout)
     }
 
     static func == (lhs: Self, rhs: Self) -> Bool {
@@ -59,17 +94,3 @@ public extension TypographyFontToken {
     }
 }
 
-public extension Optional where Wrapped == any TypographyFontToken {
-
-    func equals(_ other: (any TypographyFontToken)?) -> Bool {
-        return self?.font == other?.font && self?.uiFont == other?.uiFont
-    }
-}
-
-@_spi(SI_SPI) public struct TypographyFontTokenClear: TypographyFontToken {
-    public let uiFont: UIFont = .systemFont(ofSize: 14)
-    public let font: Font = .body
-
-    public init() {
-    }
-}

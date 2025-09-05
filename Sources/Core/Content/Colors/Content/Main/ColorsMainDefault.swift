@@ -19,12 +19,14 @@ public struct ColorsMainDefault: ColorsMain {
 
     // MARK: - Init
 
-    public init(main: any ColorToken,
-                onMain: any ColorToken,
-                mainVariant: any ColorToken,
-                onMainVariant: any ColorToken,
-                mainContainer: any ColorToken,
-                onMainContainer: any ColorToken) {
+    public init(
+        main: any ColorToken,
+        onMain: any ColorToken,
+        mainVariant: any ColorToken,
+        onMainVariant: any ColorToken,
+        mainContainer: any ColorToken,
+        onMainContainer: any ColorToken
+    ) {
         self.main = main
         self.onMain = onMain
         self.mainVariant = mainVariant

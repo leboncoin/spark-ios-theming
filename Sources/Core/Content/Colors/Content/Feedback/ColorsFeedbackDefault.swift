@@ -33,26 +33,28 @@ public struct ColorsFeedbackDefault: ColorsFeedback {
 
     // MARK: - Init
 
-    public init(success: any ColorToken,
-                onSuccess: any ColorToken,
-                successContainer: any ColorToken,
-                onSuccessContainer: any ColorToken,
-                alert: any ColorToken,
-                onAlert: any ColorToken,
-                alertContainer: any ColorToken,
-                onAlertContainer: any ColorToken,
-                error: any ColorToken,
-                onError: any ColorToken,
-                errorContainer: any ColorToken,
-                onErrorContainer: any ColorToken,
-                info: any ColorToken,
-                onInfo: any ColorToken,
-                infoContainer: any ColorToken,
-                onInfoContainer: any ColorToken,
-                neutral: any ColorToken,
-                onNeutral: any ColorToken,
-                neutralContainer: any ColorToken,
-                onNeutralContainer: any ColorToken) {
+    public init(
+        success: any ColorToken,
+        onSuccess: any ColorToken,
+        successContainer: any ColorToken,
+        onSuccessContainer: any ColorToken,
+        alert: any ColorToken,
+        onAlert: any ColorToken,
+        alertContainer: any ColorToken,
+        onAlertContainer: any ColorToken,
+        error: any ColorToken,
+        onError: any ColorToken,
+        errorContainer: any ColorToken,
+        onErrorContainer: any ColorToken,
+        info: any ColorToken,
+        onInfo: any ColorToken,
+        infoContainer: any ColorToken,
+        onInfoContainer: any ColorToken,
+        neutral: any ColorToken,
+        onNeutral: any ColorToken,
+        neutralContainer: any ColorToken,
+        onNeutralContainer: any ColorToken
+    ) {
         self.success = success
         self.onSuccess = onSuccess
         self.successContainer = successContainer

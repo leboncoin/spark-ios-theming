@@ -17,10 +17,12 @@ public struct ColorsBasicDefault: ColorsBasic {
 
     // MARK: - Init
 
-    public init(basic: any ColorToken,
-                onBasic: any ColorToken,
-                basicContainer: any ColorToken,
-                onBasicContainer: any ColorToken) {
+    public init(
+        basic: any ColorToken,
+        onBasic: any ColorToken,
+        basicContainer: any ColorToken,
+        onBasicContainer: any ColorToken
+    ) {
         self.basic = basic
         self.onBasic = onBasic
         self.basicContainer = basicContainer

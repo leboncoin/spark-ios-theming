@@ -19,12 +19,14 @@ public struct ColorsSupportDefault: ColorsSupport {
 
     // MARK: - Init
 
-    public init(support: any ColorToken,
-                onSupport: any ColorToken,
-                supportVariant: any ColorToken,
-                onSupportVariant: any ColorToken,
-                supportContainer: any ColorToken,
-                onSupportContainer: any ColorToken) {
+    public init(
+        support: any ColorToken,
+        onSupport: any ColorToken,
+        supportVariant: any ColorToken,
+        onSupportVariant: any ColorToken,
+        supportContainer: any ColorToken,
+        onSupportContainer: any ColorToken
+    ) {
         self.support = support
         self.onSupport = onSupport
         self.supportVariant = supportVariant

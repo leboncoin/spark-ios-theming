@@ -12,7 +12,7 @@ public struct SparkLayout: Layout {
 
     // MARK: - Properties
 
-    public let spacing: LayoutSpacing = LayoutSpacingDefault(
+    public let spacing: any LayoutSpacing = LayoutSpacingDefault(
         small: 4,
         medium: 8,
         large: 16,
