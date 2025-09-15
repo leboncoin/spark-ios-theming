@@ -25,18 +25,20 @@ public struct ColorsBaseDefault: ColorsBase {
 
     // MARK: - Init
 
-    public init(background: any ColorToken,
-                onBackground: any ColorToken,
-                backgroundVariant: any ColorToken,
-                onBackgroundVariant: any ColorToken,
-                surface: any ColorToken,
-                onSurface: any ColorToken,
-                surfaceInverse: any ColorToken,
-                onSurfaceInverse: any ColorToken,
-                outline: any ColorToken,
-                outlineHigh: any ColorToken,
-                overlay: any ColorToken,
-                onOverlay: any ColorToken) {
+    public init(
+        background: any ColorToken,
+        onBackground: any ColorToken,
+        backgroundVariant: any ColorToken,
+        onBackgroundVariant: any ColorToken,
+        surface: any ColorToken,
+        onSurface: any ColorToken,
+        surfaceInverse: any ColorToken,
+        onSurfaceInverse: any ColorToken,
+        outline: any ColorToken,
+        outlineHigh: any ColorToken,
+        overlay: any ColorToken,
+        onOverlay: any ColorToken
+    ) {
         self.background = background
         self.onBackground = onBackground
         self.backgroundVariant = backgroundVariant

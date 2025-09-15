@@ -7,7 +7,7 @@
 //
 
 // sourcery: AutoMockable
-public protocol ColorsStates {
+public protocol ColorsStates: Hashable, Equatable {
 
     // MARK: - Main
 
@@ -22,11 +22,13 @@ public protocol ColorsStates {
     var supportContainerPressed: any ColorToken { get }
 
     // MARK: - Accent
+
     var accentPressed: any ColorToken { get }
     var accentVariantPressed: any ColorToken { get }
     var accentContainerPressed: any ColorToken { get }
 
     // MARK: - Basic
+
     var basicPressed: any ColorToken { get }
     var basicContainerPressed: any ColorToken { get }
 
@@ -48,3 +50,73 @@ public protocol ColorsStates {
     var neutralPressed: any ColorToken { get }
     var neutralContainerPressed: any ColorToken { get }
 }
+
+// MARK: - Hashable & Equatable
+
+public extension ColorsStates {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.mainPressed)
+        hasher.combine(self.mainVariantPressed)
+        hasher.combine(self.mainContainerPressed)
+
+        hasher.combine(self.supportPressed)
+        hasher.combine(self.supportVariantPressed)
+        hasher.combine(self.supportContainerPressed)
+
+        hasher.combine(self.accentPressed)
+        hasher.combine(self.accentVariantPressed)
+        hasher.combine(self.accentContainerPressed)
+
+        hasher.combine(self.basicPressed)
+        hasher.combine(self.basicContainerPressed)
+
+        hasher.combine(self.surfacePressed)
+        hasher.combine(self.surfaceInversePressed)
+        hasher.combine(self.successPressed)
+        hasher.combine(self.successContainerPressed)
+        hasher.combine(self.alertPressed)
+        hasher.combine(self.alertContainerPressed)
+        hasher.combine(self.errorPressed)
+        hasher.combine(self.errorContainerPressed)
+        hasher.combine(self.infoPressed)
+        hasher.combine(self.infoContainerPressed)
+        hasher.combine(self.neutralPressed)
+        hasher.combine(self.neutralContainerPressed)
+    }
+
+    func equals(_ other: any ColorsStates) -> Bool {
+        return self.mainPressed.equals(other.mainPressed) &&
+        self.mainVariantPressed.equals(other.mainVariantPressed) &&
+        self.mainContainerPressed.equals(other.mainContainerPressed) &&
+
+        self.supportPressed.equals(other.supportPressed) &&
+        self.supportVariantPressed.equals(other.supportVariantPressed) &&
+        self.supportContainerPressed.equals(other.supportContainerPressed) &&
+
+        self.accentPressed.equals(other.accentPressed) &&
+        self.accentVariantPressed.equals(other.accentVariantPressed) &&
+        self.accentContainerPressed.equals(other.accentContainerPressed) &&
+
+        self.basicPressed.equals(other.basicPressed) &&
+        self.basicContainerPressed.equals(other.basicContainerPressed) &&
+
+        self.surfacePressed.equals(other.surfacePressed) &&
+        self.surfaceInversePressed.equals(other.surfaceInversePressed) &&
+        self.successPressed.equals(other.successPressed) &&
+        self.successContainerPressed.equals(other.successContainerPressed) &&
+        self.alertPressed.equals(other.alertPressed) &&
+        self.alertContainerPressed.equals(other.alertContainerPressed) &&
+        self.errorPressed.equals(other.errorPressed) &&
+        self.errorContainerPressed.equals(other.errorContainerPressed) &&
+        self.infoPressed.equals(other.infoPressed) &&
+        self.infoContainerPressed.equals(other.infoContainerPressed) &&
+        self.neutralPressed.equals(other.neutralPressed) &&
+        self.neutralContainerPressed.equals(other.neutralContainerPressed)
+    }
+
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.equals(rhs)
+    }
+}
+

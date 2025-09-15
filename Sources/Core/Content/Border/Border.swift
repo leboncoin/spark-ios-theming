@@ -9,37 +9,26 @@
 import Foundation
 
 // sourcery: AutoMockable
-public protocol Border {
-    var width: BorderWidth { get }
-    var radius: BorderRadius { get }
+public protocol Border: Hashable, Equatable {
+    var width: any BorderWidth { get }
+    var radius: any BorderRadius { get }
 }
 
-// MARK: - Width
+// MARK: - Hashable & Equatable
 
-// sourcery: AutoMockable
-public protocol BorderWidth {
-    var none: CGFloat { get }
-    var small: CGFloat { get }
-    var medium: CGFloat { get }
-}
+public extension Border {
 
-public extension BorderWidth {
-    var none: CGFloat { 0 }
-}
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.width)
+        hasher.combine(self.radius)
+    }
 
-// MARK: - Radius
+    func equals(_ other: any Border) -> Bool {
+        return self.width.equals(other.width) &&
+        self.radius.equals(other.radius)
+    }
 
-// sourcery: AutoMockable
-public protocol BorderRadius {
-    var none: CGFloat { get }
-    var small: CGFloat { get }
-    var medium: CGFloat { get }
-    var large: CGFloat { get }
-    var xLarge: CGFloat { get }
-    var full: CGFloat { get }
-}
-
-public extension BorderRadius {
-    var none: CGFloat { 0 }
-    var full: CGFloat { .infinity }
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.equals(rhs)
+    }
 }
