@@ -28,7 +28,7 @@ public extension ElevationDropShadowsGeneratedMock {
         let mock = ElevationShadowAndDropShadowGeneratedMock()
         mock.offset = .init(x: 10, y: 11)
         mock.blur = 0.5
-        mock.colorToken = ColorTokenGeneratedMock.random()
+        mock.colorToken = ColorTokenGeneratedMock.blue()
         mock.opacity = 0.4
 
         mock.small = ElevationShadowGeneratedMock.mocked()
@@ -48,7 +48,7 @@ public extension ElevationShadowGeneratedMock {
         let mock = ElevationShadowGeneratedMock()
         mock.offset = .init(x: 20, y: 21)
         mock.blur = 0.2
-        mock.colorToken = ColorTokenGeneratedMock.random()
+        mock.colorToken = ColorTokenGeneratedMock.blue()
         mock.opacity = 0.8
 
         return mock
