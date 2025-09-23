@@ -9,8 +9,6 @@
 import Foundation
 import SwiftUI
 
-// TODO: Test all equatable ??
-
 // sourcery: AutoMockable
 public protocol Theme: Hashable, Equatable {
     var border: any SparkTheming.Border { get }
