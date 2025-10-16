@@ -1,5 +1,5 @@
 //
-//  SparkTheme.swift
+//  SparkBorder.swift
 //  SparkTheme
 //
 //  Created by robin.lemaire on 28/02/2023.
@@ -8,15 +8,15 @@
 
 import SparkTheming
 
-public struct SparkBorder: Border {
+struct SparkBorder: Border {
 
     // MARK: - Properties
 
-    public let width: any BorderWidth = BorderWidthDefault(
+    let width: any BorderWidth = BorderWidthDefault(
         small: 1,
         medium: 2
     )
-    public let radius: any BorderRadius = BorderRadiusDefault(
+    let radius: any BorderRadius = BorderRadiusDefault(
         small: 4,
         medium: 8,
         large: 16,
@@ -25,5 +25,5 @@ public struct SparkBorder: Border {
 
     // MARK: - Initialization
 
-    public init() {}
+    init() {}
 }
