@@ -8,11 +8,11 @@
 
 import SparkTheming
 
-public struct SparkLayout: Layout {
+struct SparkLayout: Layout {
 
     // MARK: - Properties
 
-    public let spacing: any LayoutSpacing = LayoutSpacingDefault(
+    let spacing: any LayoutSpacing = LayoutSpacingDefault(
         small: 4,
         medium: 8,
         large: 16,
@@ -23,5 +23,5 @@ public struct SparkLayout: Layout {
 
     // MARK: - Initialization
 
-    public init() {}
+    init() {}
 }

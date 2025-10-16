@@ -6,20 +6,19 @@
 //  Copyright © 2023 2025. All rights reserved.
 //
 
-import Combine
-import SparkTheming
 import Foundation
+import SparkTheming
 
-public enum RainbowTheme {
+@_spi(SI_SPI) public enum RainbowTheme {
 
     // MARK: - Properties
 
     public static var shared = ThemeDefault(
-        border: SparkBorder(),
+        border: RainbowBorder(),
         colors: RainbowColors(),
-        elevation: SparkElevation(),
-        layout: SparkLayout(),
-        typography: SparkTypography(),
-        dims: SparkDims()
+        elevation: RainbowElevation(),
+        layout: RainbowLayout(),
+        typography: RainbowTypography(),
+        dims: RainbowDims()
     )
 }
