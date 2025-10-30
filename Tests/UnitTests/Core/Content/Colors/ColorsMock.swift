@@ -10,8 +10,6 @@ import XCTest
 import SparkTheming
 @_spi(SI_SPI) import SparkThemingTesting
 
-@testable import SparkTheme
-
 final class ColorsMock {
 
     // MARK: - Test Data

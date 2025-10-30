@@ -6,8 +6,6 @@
 //  Copyright © 2025 Leboncoin. All rights reserved.
 //
 
-import SparkTheming
-
 struct RainbowBorder: Border {
 
     // MARK: - Properties

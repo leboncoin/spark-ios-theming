@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SparkTheming
 
 struct RainbowDims: Dims {
 

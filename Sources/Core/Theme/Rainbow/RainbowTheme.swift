@@ -7,12 +7,15 @@
 //
 
 import Foundation
-import SparkTheming
 
+/// The Rainbow theme is only used by an EnvironmentValues on spark-ios-common.
+/// It should not be used somewhere else.
 @_spi(SI_SPI) public enum RainbowTheme {
 
     // MARK: - Properties
 
+    /// The Rainbow theme is only used by an EnvironmentValues on spark-ios-common.
+    /// It should not be used somewhere else.
     public static var shared = ThemeDefault(
         border: RainbowBorder(),
         colors: RainbowColors(),

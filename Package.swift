@@ -19,10 +19,6 @@ let package = Package(
             targets: ["SparkThemingTesting"]
         ),
         .library(
-            name: "SparkFakeTheme",
-            targets: ["SparkFakeTheme"]
-        ),
-        .library(
             name: "SparkTheme",
             targets: ["SparkTheme"]
         ),
@@ -38,13 +34,6 @@ let package = Package(
                 "SparkTheming"
             ],
             path: "Sources/Testing"
-        ),
-        .target(
-            name: "SparkFakeTheme",
-            dependencies: [
-                "SparkTheming"
-            ],
-            path: "Sources/FakeTheme"
         ),
         .target(
             name: "SparkTheme",
