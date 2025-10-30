@@ -8,7 +8,6 @@
 
 import XCTest
 import SparkTheming
-@testable import SparkTheme
 @_spi(SI_SPI) import SparkThemingTesting
 
 final class ElevationMock {

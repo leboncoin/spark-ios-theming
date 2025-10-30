@@ -8,7 +8,6 @@
 
 import XCTest
 import SparkTheming
-@testable import SparkTheme
 
 final class ThemeEquatableTests: XCTestCase {
 
