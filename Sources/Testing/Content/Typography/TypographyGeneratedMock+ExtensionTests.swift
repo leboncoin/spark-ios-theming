@@ -50,16 +50,21 @@ public extension TypographyFontTokenGeneratedMock {
     static func mocked(_ font: Font) -> TypographyFontTokenGeneratedMock {
         let fontToken = TypographyFontTokenGeneratedMock()
         fontToken.font = font
+        fontToken.uiFont = .italicSystemFont(ofSize: 12)
         return fontToken
     }
 
     static func mocked(_ font: UIFont) -> TypographyFontTokenGeneratedMock {
         let fontToken = TypographyFontTokenGeneratedMock()
         fontToken.uiFont = font
+        fontToken.font = .caption
         return fontToken
     }
 
-    static func mocked(uiFont: UIFont, font: Font) -> TypographyFontTokenGeneratedMock {
+    static func mocked(
+        uiFont: UIFont = .boldSystemFont(ofSize: 16),
+        font: Font = .footnote
+    ) -> TypographyFontTokenGeneratedMock {
         let fontToken = TypographyFontTokenGeneratedMock()
         fontToken.uiFont = uiFont
         fontToken.font = font
