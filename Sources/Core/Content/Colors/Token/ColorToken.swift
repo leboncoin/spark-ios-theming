@@ -27,6 +27,10 @@ public extension ColorToken {
 
 public extension ColorToken {
 
+    var cgColor: CGColor {
+        self.uiColor.cgColor
+    }
+
     func opacity(_ opacity: CGFloat) -> any ColorToken {
         return OpacityColorToken(
             colorToken: self,
