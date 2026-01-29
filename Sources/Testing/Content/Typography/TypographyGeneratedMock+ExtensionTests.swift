@@ -70,4 +70,46 @@ public extension TypographyFontTokenGeneratedMock {
         fontToken.font = font
         return fontToken
     }
+
+    static func body() -> TypographyFontTokenGeneratedMock {
+        let fontToken = TypographyFontTokenGeneratedMock()
+        fontToken.uiFont = .systemFont(ofSize: 14)
+        fontToken.font = .body
+        return fontToken
+    }
+
+    static func callout() -> TypographyFontTokenGeneratedMock {
+        let fontToken = TypographyFontTokenGeneratedMock()
+        fontToken.uiFont = .boldSystemFont(ofSize: 15)
+        fontToken.font = .callout
+        return fontToken
+    }
+
+    static func caption() -> TypographyFontTokenGeneratedMock {
+        let fontToken = TypographyFontTokenGeneratedMock()
+        fontToken.uiFont = .italicSystemFont(ofSize: 12)
+        fontToken.font = .caption
+        return fontToken
+    }
+
+    static func footnote() -> TypographyFontTokenGeneratedMock {
+        let fontToken = TypographyFontTokenGeneratedMock()
+        fontToken.uiFont = .italicSystemFont(ofSize: 8)
+        fontToken.font = .footnote
+        return fontToken
+    }
+
+    static func headline() -> TypographyFontTokenGeneratedMock {
+        let fontToken = TypographyFontTokenGeneratedMock()
+        fontToken.uiFont = .boldSystemFont(ofSize: 16)
+        fontToken.font = .headline
+        return fontToken
+    }
+
+    static func title() -> TypographyFontTokenGeneratedMock {
+        let fontToken = TypographyFontTokenGeneratedMock()
+        fontToken.uiFont = .boldSystemFont(ofSize: 20)
+        fontToken.font = .title
+        return fontToken
+    }
 }
