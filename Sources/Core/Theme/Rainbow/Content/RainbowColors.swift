@@ -40,13 +40,6 @@ struct RainbowColors: Colors {
         onAccentContainer: RainbowColorToken(color: .red)
     )
 
-    let basic: any ColorsBasic = ColorsBasicDefault(
-        basic: RainbowColorToken(color: .red),
-        onBasic: RainbowColorToken(color: .yellow),
-        basicContainer: RainbowColorToken(color: .green),
-        onBasicContainer: RainbowColorToken(color: .purple)
-    )
-
     let base: any ColorsBase = ColorsBaseDefault(
         background: RainbowColorToken(color: .purple),
         onBackground: RainbowColorToken(color: .blue),
@@ -95,8 +88,6 @@ struct RainbowColors: Colors {
         accentPressed: RainbowColorToken(color: .orange),
         accentVariantPressed: RainbowColorToken(color: .yellow),
         accentContainerPressed: RainbowColorToken(color: .green),
-        basicPressed: RainbowColorToken(color: .blue),
-        basicContainerPressed: RainbowColorToken(color: .purple),
         surfacePressed: RainbowColorToken(color: .blue),
         surfaceInversePressed: RainbowColorToken(color: .green),
         successPressed: RainbowColorToken(color: .yellow),

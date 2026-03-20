@@ -19,8 +19,6 @@ public struct ColorsStatesDefault: ColorsStates {
     public let accentPressed: any ColorToken
     public let accentVariantPressed: any ColorToken
     public let accentContainerPressed: any ColorToken
-    public let basicPressed: any ColorToken
-    public let basicContainerPressed: any ColorToken
     public let surfacePressed: any ColorToken
     public let surfaceInversePressed: any ColorToken
     public let successPressed: any ColorToken
@@ -46,8 +44,6 @@ public struct ColorsStatesDefault: ColorsStates {
         accentPressed: any ColorToken,
         accentVariantPressed: any ColorToken,
         accentContainerPressed: any ColorToken,
-        basicPressed: any ColorToken,
-        basicContainerPressed: any ColorToken,
         surfacePressed: any ColorToken,
         surfaceInversePressed: any ColorToken,
         successPressed: any ColorToken,
@@ -70,8 +66,6 @@ public struct ColorsStatesDefault: ColorsStates {
         self.accentPressed = accentPressed
         self.accentVariantPressed = accentVariantPressed
         self.accentContainerPressed = accentContainerPressed
-        self.basicPressed = basicPressed
-        self.basicContainerPressed = basicContainerPressed
         self.surfacePressed = surfacePressed
         self.surfaceInversePressed = surfaceInversePressed
         self.successPressed = successPressed

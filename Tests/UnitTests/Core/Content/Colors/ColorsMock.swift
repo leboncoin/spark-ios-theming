@@ -40,12 +40,6 @@ final class ColorsMock {
                 accentContainer: ColorTokenGeneratedMock.yellow(),
                 onAccentContainer: ColorTokenGeneratedMock.purple()
             ),
-            basic: ColorsBasicDefault(
-                basic: ColorTokenGeneratedMock.green(),
-                onBasic: ColorTokenGeneratedMock.orange(),
-                basicContainer: ColorTokenGeneratedMock.yellow(),
-                onBasicContainer: ColorTokenGeneratedMock.purple()
-            ),
             base: ColorsBaseDefault(
                 background: ColorTokenGeneratedMock.red(),
                 onBackground: ColorTokenGeneratedMock.blue(),
@@ -92,8 +86,6 @@ final class ColorsMock {
                 accentPressed: ColorTokenGeneratedMock.red(),
                 accentVariantPressed: ColorTokenGeneratedMock.blue(),
                 accentContainerPressed: ColorTokenGeneratedMock.green(),
-                basicPressed: ColorTokenGeneratedMock.orange(),
-                basicContainerPressed: ColorTokenGeneratedMock.yellow(),
                 surfacePressed: ColorTokenGeneratedMock.purple(),
                 surfaceInversePressed: ColorTokenGeneratedMock.red(),
                 successPressed: ColorTokenGeneratedMock.red(),
@@ -136,12 +128,6 @@ final class ColorsMock {
                 accentContainer: ColorTokenGeneratedMock.yellow(),
                 onAccentContainer: ColorTokenGeneratedMock.purple()
             ),
-            basic: ColorsBasicDefault(
-                basic: ColorTokenGeneratedMock.green(),
-                onBasic: ColorTokenGeneratedMock.orange(),
-                basicContainer: ColorTokenGeneratedMock.yellow(),
-                onBasicContainer: ColorTokenGeneratedMock.purple()
-            ),
             base: ColorsBaseDefault(
                 background: ColorTokenGeneratedMock.red(),
                 onBackground: ColorTokenGeneratedMock.blue(),
@@ -188,8 +174,6 @@ final class ColorsMock {
                 accentPressed: ColorTokenGeneratedMock.red(),
                 accentVariantPressed: ColorTokenGeneratedMock.blue(),
                 accentContainerPressed: ColorTokenGeneratedMock.green(),
-                basicPressed: ColorTokenGeneratedMock.orange(),
-                basicContainerPressed: ColorTokenGeneratedMock.yellow(),
                 surfacePressed: ColorTokenGeneratedMock.purple(),
                 surfaceInversePressed: ColorTokenGeneratedMock.red(),
                 successPressed: ColorTokenGeneratedMock.red(),
@@ -231,12 +215,6 @@ final class ColorsMock {
                 onAccentVariant: ColorTokenGeneratedMock.clear,
                 accentContainer: ColorTokenGeneratedMock.clear,
                 onAccentContainer: ColorTokenGeneratedMock.clear
-            ),
-            basic: ColorsBasicDefault(
-                basic: ColorTokenGeneratedMock.clear,
-                onBasic: ColorTokenGeneratedMock.clear,
-                basicContainer: ColorTokenGeneratedMock.clear,
-                onBasicContainer: ColorTokenGeneratedMock.clear
             ),
             base: ColorsBaseDefault(
                 background: ColorTokenGeneratedMock.clear,
@@ -284,8 +262,6 @@ final class ColorsMock {
                 accentPressed: ColorTokenGeneratedMock.clear,
                 accentVariantPressed: ColorTokenGeneratedMock.clear,
                 accentContainerPressed: ColorTokenGeneratedMock.clear,
-                basicPressed: ColorTokenGeneratedMock.clear,
-                basicContainerPressed: ColorTokenGeneratedMock.clear,
                 surfacePressed: ColorTokenGeneratedMock.clear,
                 surfaceInversePressed: ColorTokenGeneratedMock.clear,
                 successPressed: ColorTokenGeneratedMock.clear,
