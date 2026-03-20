@@ -38,12 +38,6 @@ struct SparkColors: Colors {
         accentContainer: ColorTokenDefault(named: "accent-container", in: .module),
         onAccentContainer: ColorTokenDefault(named: "on-accent-container", in: .module))
 
-    let basic: any ColorsBasic = ColorsBasicDefault(
-        basic: ColorTokenDefault(named: "basic", in: .module),
-        onBasic: ColorTokenDefault(named: "on-basic", in: .module),
-        basicContainer: ColorTokenDefault(named: "basic-container", in: .module),
-        onBasicContainer: ColorTokenDefault(named: "on-basic-container", in: .module))
-
     let base: any ColorsBase = ColorsBaseDefault(
         background: ColorTokenDefault(named: "background", in: .module),
         onBackground: ColorTokenDefault(named: "on-background", in: .module),
@@ -91,8 +85,6 @@ struct SparkColors: Colors {
         accentPressed: ColorTokenDefault(named: "accent-pressed", in: .module),
         accentVariantPressed: ColorTokenDefault(named: "accent-variant-pressed", in: .module),
         accentContainerPressed: ColorTokenDefault(named: "accent-container-pressed", in: .module),
-        basicPressed: ColorTokenDefault(named: "basic-pressed", in: .module),
-        basicContainerPressed: ColorTokenDefault(named: "basic-container-pressed", in: .module),
         surfacePressed: ColorTokenDefault(named: "surface-pressed", in: .module),
         surfaceInversePressed: ColorTokenDefault(named: "surface-inverse-pressed", in: .module),
         successPressed: ColorTokenDefault(named: "success-pressed", in: .module),

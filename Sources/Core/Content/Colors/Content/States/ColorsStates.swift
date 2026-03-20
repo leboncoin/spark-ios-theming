@@ -27,11 +27,6 @@ public protocol ColorsStates: Hashable, Equatable {
     var accentVariantPressed: any ColorToken { get }
     var accentContainerPressed: any ColorToken { get }
 
-    // MARK: - Basic
-
-    var basicPressed: any ColorToken { get }
-    var basicContainerPressed: any ColorToken { get }
-
     // MARK: - Base
 
     var surfacePressed: any ColorToken { get }
@@ -68,9 +63,6 @@ public extension ColorsStates {
         hasher.combine(self.accentVariantPressed)
         hasher.combine(self.accentContainerPressed)
 
-        hasher.combine(self.basicPressed)
-        hasher.combine(self.basicContainerPressed)
-
         hasher.combine(self.surfacePressed)
         hasher.combine(self.surfaceInversePressed)
         hasher.combine(self.successPressed)
@@ -97,9 +89,6 @@ public extension ColorsStates {
         self.accentPressed.equals(other.accentPressed) &&
         self.accentVariantPressed.equals(other.accentVariantPressed) &&
         self.accentContainerPressed.equals(other.accentContainerPressed) &&
-
-        self.basicPressed.equals(other.basicPressed) &&
-        self.basicContainerPressed.equals(other.basicContainerPressed) &&
 
         self.surfacePressed.equals(other.surfacePressed) &&
         self.surfaceInversePressed.equals(other.surfaceInversePressed) &&
