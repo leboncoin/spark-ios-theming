@@ -21,6 +21,7 @@ public extension ColorsGeneratedMock {
         mock.base = ColorsBaseGeneratedMock.mocked()
         mock.feedback = ColorsFeedbackGeneratedMock.mocked()
         mock.states = ColorsStatesGeneratedMock.mocked()
+        mock.ia = ColorsIAGeneratedMock.mocked()
 
         return mock
     }
