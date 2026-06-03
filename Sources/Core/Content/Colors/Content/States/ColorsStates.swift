@@ -44,6 +44,11 @@ public protocol ColorsStates: Hashable, Equatable {
     var infoContainerPressed: any ColorToken { get }
     var neutralPressed: any ColorToken { get }
     var neutralContainerPressed: any ColorToken { get }
+
+    // MARK: - IA
+
+    var iaPressed: any ColorToken { get }
+    var iaContainerPressed: any ColorToken { get }
 }
 
 // MARK: - Hashable & Equatable
@@ -75,6 +80,8 @@ public extension ColorsStates {
         hasher.combine(self.infoContainerPressed)
         hasher.combine(self.neutralPressed)
         hasher.combine(self.neutralContainerPressed)
+        hasher.combine(self.iaPressed)
+        hasher.combine(self.iaContainerPressed)
     }
 
     func equals(_ other: any ColorsStates) -> Bool {
@@ -101,7 +108,9 @@ public extension ColorsStates {
         self.infoPressed.equals(other.infoPressed) &&
         self.infoContainerPressed.equals(other.infoContainerPressed) &&
         self.neutralPressed.equals(other.neutralPressed) &&
-        self.neutralContainerPressed.equals(other.neutralContainerPressed)
+        self.neutralContainerPressed.equals(other.neutralContainerPressed) &&
+        self.iaPressed.equals(other.iaPressed) &&
+        self.iaContainerPressed.equals(other.iaContainerPressed)
     }
 
     static func == (lhs: Self, rhs: Self) -> Bool {
