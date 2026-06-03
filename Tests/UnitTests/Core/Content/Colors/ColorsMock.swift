@@ -97,7 +97,9 @@ final class ColorsMock {
                 infoPressed: ColorTokenGeneratedMock.orange(),
                 infoContainerPressed: ColorTokenGeneratedMock.yellow(),
                 neutralPressed: ColorTokenGeneratedMock.purple(),
-                neutralContainerPressed: ColorTokenGeneratedMock.red()
+                neutralContainerPressed: ColorTokenGeneratedMock.red(),
+                iaPressed: ColorTokenGeneratedMock.blue(),
+                iaContainerPressed: ColorTokenGeneratedMock.green()
             ),
             ia: ColorsIADefault(
                 ia: ColorTokenGeneratedMock.red(),
@@ -191,7 +193,9 @@ final class ColorsMock {
                 infoPressed: ColorTokenGeneratedMock.orange(),
                 infoContainerPressed: ColorTokenGeneratedMock.yellow(),
                 neutralPressed: ColorTokenGeneratedMock.purple(),
-                neutralContainerPressed: ColorTokenGeneratedMock.red()
+                neutralContainerPressed: ColorTokenGeneratedMock.red(),
+                iaPressed: ColorTokenGeneratedMock.blue(),
+                iaContainerPressed: ColorTokenGeneratedMock.green()
             ),
             ia: ColorsIADefault(
                 ia: ColorTokenGeneratedMock.red(),
@@ -285,7 +289,9 @@ final class ColorsMock {
                 infoPressed: ColorTokenGeneratedMock.clear,
                 infoContainerPressed: ColorTokenGeneratedMock.clear,
                 neutralPressed: ColorTokenGeneratedMock.clear,
-                neutralContainerPressed: ColorTokenGeneratedMock.clear
+                neutralContainerPressed: ColorTokenGeneratedMock.clear,
+                iaPressed: ColorTokenGeneratedMock.clear,
+                iaContainerPressed: ColorTokenGeneratedMock.clear
             ),
             ia: ColorsIADefault(
                 ia: ColorTokenGeneratedMock.clear,

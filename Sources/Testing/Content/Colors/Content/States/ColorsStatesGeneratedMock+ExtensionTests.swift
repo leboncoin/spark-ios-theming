@@ -40,6 +40,8 @@ public extension ColorsStatesGeneratedMock {
         mock.underlyingInfoContainerPressed = ColorTokenGeneratedMock.random()
         mock.underlyingNeutralPressed = ColorTokenGeneratedMock.random()
         mock.underlyingNeutralContainerPressed = ColorTokenGeneratedMock.random()
+        mock.underlyingIaPressed = ColorTokenGeneratedMock.random()
+        mock.underlyingIaContainerPressed = ColorTokenGeneratedMock.random()
 
         return mock
     }

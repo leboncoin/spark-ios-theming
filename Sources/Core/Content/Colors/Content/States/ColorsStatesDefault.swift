@@ -31,6 +31,8 @@ public struct ColorsStatesDefault: ColorsStates {
     public let infoContainerPressed: any ColorToken
     public let neutralPressed: any ColorToken
     public let neutralContainerPressed: any ColorToken
+    public let iaPressed: any ColorToken
+    public let iaContainerPressed: any ColorToken
 
     // MARK: - Init
 
@@ -55,7 +57,9 @@ public struct ColorsStatesDefault: ColorsStates {
         infoPressed: any ColorToken,
         infoContainerPressed: any ColorToken,
         neutralPressed: any ColorToken,
-        neutralContainerPressed: any ColorToken
+        neutralContainerPressed: any ColorToken,
+        iaPressed: any ColorToken,
+        iaContainerPressed: any ColorToken
     ) {
         self.mainPressed = mainPressed
         self.mainVariantPressed = mainVariantPressed
@@ -78,5 +82,7 @@ public struct ColorsStatesDefault: ColorsStates {
         self.infoContainerPressed = infoContainerPressed
         self.neutralPressed = neutralPressed
         self.neutralContainerPressed = neutralContainerPressed
+        self.iaPressed = iaPressed
+        self.iaContainerPressed = iaContainerPressed
     }
 }
