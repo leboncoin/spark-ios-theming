@@ -19,7 +19,7 @@ public protocol Colors: Hashable, Equatable {
     var base: any ColorsBase { get }
     var feedback: any ColorsFeedback { get }
     var states: any ColorsStates { get }
-    var ia: any ColorsIA { get }
+    var ai: any ColorsAI { get }
 }
 
 // MARK: - Hashable & Equatable
@@ -33,7 +33,7 @@ public extension Colors {
         hasher.combine(self.base)
         hasher.combine(self.feedback)
         hasher.combine(self.states)
-        hasher.combine(self.ia)
+        hasher.combine(self.ai)
     }
 
     func equals(_ other: any Colors) -> Bool {
@@ -43,7 +43,7 @@ public extension Colors {
         self.base.equals(other.base) &&
         self.feedback.equals(other.feedback) &&
         self.states.equals(other.states) &&
-        self.ia.equals(other.ia)
+        self.ai.equals(other.ai)
     }
 
     static func == (lhs: Self, rhs: Self) -> Bool {

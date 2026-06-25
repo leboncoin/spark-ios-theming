@@ -19,7 +19,7 @@ public struct ColorsDefault: Colors {
     public let base: any ColorsBase
     public let feedback: any ColorsFeedback
     public let states: any ColorsStates
-    public let ia: any ColorsIA
+    public let ai: any ColorsAI
 
     // MARK: - Initialization
 
@@ -30,7 +30,7 @@ public struct ColorsDefault: Colors {
         base: any ColorsBase,
         feedback: any ColorsFeedback,
         states: any ColorsStates,
-        ia: any ColorsIA
+        ai: any ColorsAI
     ) {
         self.main = main
         self.support = support
@@ -38,6 +38,6 @@ public struct ColorsDefault: Colors {
         self.base = base
         self.feedback = feedback
         self.states = states
-        self.ia = ia
+        self.ai = ai
     }
 }
