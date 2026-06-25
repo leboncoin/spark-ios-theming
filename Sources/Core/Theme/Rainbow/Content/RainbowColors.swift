@@ -100,15 +100,15 @@ struct RainbowColors: Colors {
         infoContainerPressed: RainbowColorToken(color: .purple),
         neutralPressed: RainbowColorToken(color: .blue),
         neutralContainerPressed: RainbowColorToken(color: .green),
-        iaPressed: RainbowColorToken(color: .yellow),
-        iaContainerPressed: RainbowColorToken(color: .orange)
+        aiPressed: RainbowColorToken(color: .yellow),
+        aiContainerPressed: RainbowColorToken(color: .orange)
     )
 
-    let ia: any ColorsIA = ColorsIADefault(
-        ia: RainbowColorToken(color: .yellow),
-        onIA: RainbowColorToken(color: .green),
-        iaContainer: RainbowColorToken(color: .blue),
-        onIAContainer: RainbowColorToken(color: .purple)
+    let ai: any ColorsAI = ColorsAIDefault(
+        ai: RainbowColorToken(color: .yellow),
+        onAI: RainbowColorToken(color: .green),
+        aiContainer: RainbowColorToken(color: .blue),
+        onAIContainer: RainbowColorToken(color: .purple)
     )
 
     // MARK: - Initialization

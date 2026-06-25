@@ -98,14 +98,14 @@ final class ColorsMock {
                 infoContainerPressed: ColorTokenGeneratedMock.yellow(),
                 neutralPressed: ColorTokenGeneratedMock.purple(),
                 neutralContainerPressed: ColorTokenGeneratedMock.red(),
-                iaPressed: ColorTokenGeneratedMock.blue(),
-                iaContainerPressed: ColorTokenGeneratedMock.green()
+                aiPressed: ColorTokenGeneratedMock.blue(),
+                aiContainerPressed: ColorTokenGeneratedMock.green()
             ),
-            ia: ColorsIADefault(
-                ia: ColorTokenGeneratedMock.red(),
-                onIA: ColorTokenGeneratedMock.blue(),
-                iaContainer: ColorTokenGeneratedMock.green(),
-                onIAContainer: ColorTokenGeneratedMock.orange()
+            ai: ColorsAIDefault(
+                ai: ColorTokenGeneratedMock.red(),
+                onAI: ColorTokenGeneratedMock.blue(),
+                aiContainer: ColorTokenGeneratedMock.green(),
+                onAIContainer: ColorTokenGeneratedMock.orange()
             )
         )
     }
@@ -194,14 +194,14 @@ final class ColorsMock {
                 infoContainerPressed: ColorTokenGeneratedMock.yellow(),
                 neutralPressed: ColorTokenGeneratedMock.purple(),
                 neutralContainerPressed: ColorTokenGeneratedMock.red(),
-                iaPressed: ColorTokenGeneratedMock.blue(),
-                iaContainerPressed: ColorTokenGeneratedMock.green()
+                aiPressed: ColorTokenGeneratedMock.blue(),
+                aiContainerPressed: ColorTokenGeneratedMock.green()
             ),
-            ia: ColorsIADefault(
-                ia: ColorTokenGeneratedMock.red(),
-                onIA: ColorTokenGeneratedMock.blue(),
-                iaContainer: ColorTokenGeneratedMock.green(),
-                onIAContainer: ColorTokenGeneratedMock.orange()
+            ai: ColorsAIDefault(
+                ai: ColorTokenGeneratedMock.red(),
+                onAI: ColorTokenGeneratedMock.blue(),
+                aiContainer: ColorTokenGeneratedMock.green(),
+                onAIContainer: ColorTokenGeneratedMock.orange()
             )
         )
     }
@@ -290,14 +290,14 @@ final class ColorsMock {
                 infoContainerPressed: ColorTokenGeneratedMock.clear,
                 neutralPressed: ColorTokenGeneratedMock.clear,
                 neutralContainerPressed: ColorTokenGeneratedMock.clear,
-                iaPressed: ColorTokenGeneratedMock.clear,
-                iaContainerPressed: ColorTokenGeneratedMock.clear
+                aiPressed: ColorTokenGeneratedMock.clear,
+                aiContainerPressed: ColorTokenGeneratedMock.clear
             ),
-            ia: ColorsIADefault(
-                ia: ColorTokenGeneratedMock.clear,
-                onIA: ColorTokenGeneratedMock.clear,
-                iaContainer: ColorTokenGeneratedMock.clear,
-                onIAContainer: ColorTokenGeneratedMock.clear
+            ai: ColorsAIDefault(
+                ai: ColorTokenGeneratedMock.clear,
+                onAI: ColorTokenGeneratedMock.clear,
+                aiContainer: ColorTokenGeneratedMock.clear,
+                onAIContainer: ColorTokenGeneratedMock.clear
             )
         )
     }
