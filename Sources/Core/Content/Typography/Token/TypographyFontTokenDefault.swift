@@ -15,14 +15,16 @@ public struct TypographyFontTokenDefault: TypographyFontToken {
 
     // MARK: - Private Properties
 
-    private let isHighlighted: Bool
-    private let regularFontName: String
-    private let boldFontName: String
+    private let fontStyle: TypographyFontStyle
+    private let fontNames: TypographyFontNames
     private let fontSize: CGFloat
     private let fontTextStyle: TextStyle
 
     private var fontName: String {
-        (self.isHighlighted || UIAccessibility.isBoldTextEnabled) ? self.boldFontName : self.regularFontName
+        let boldFontName = self.fontNames.bold
+        let fontName = self.fontNames.getFontName(from: self.fontStyle)
+
+        return UIAccessibility.isBoldTextEnabled ? boldFontName : fontName
     }
 
     // MARK: - Public Properties
@@ -48,26 +50,25 @@ public struct TypographyFontTokenDefault: TypographyFontToken {
 
     public init(
         named fontName: String,
+        style: TypographyFontStyle = .regular,
         size: CGFloat,
         textStyle: TextStyle
     ) {
-        self.regularFontName = fontName
-        self.boldFontName = fontName
-        self.isHighlighted = false
+        let fontNames = TypographyFontNames(fontName: fontName)
+        self.fontNames = fontNames
+        self.fontStyle = style
         self.fontSize = size
         self.fontTextStyle = textStyle
     }
 
     public init(
-        isHighlighted: Bool,
-        regularFontName: String,
-        boldFontName: String,
+        names: TypographyFontNames,
+        style: TypographyFontStyle,
         size: CGFloat,
         textStyle: TextStyle
     ) {
-        self.isHighlighted = isHighlighted
-        self.regularFontName = regularFontName
-        self.boldFontName = boldFontName
+        self.fontNames = names
+        self.fontStyle = style
         self.fontSize = size
         self.fontTextStyle = textStyle
     }
