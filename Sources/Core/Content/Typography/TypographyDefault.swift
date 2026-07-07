@@ -71,4 +71,14 @@ public struct TypographyDefault: Typography {
         self.smallHighlight = smallHighlight
         self.callout = callout
     }
+
+    // MARK: - Methods
+
+    public func custom(
+        size: CGFloat,
+        style: TypographyFontStyle,
+        textStyle: TextStyle
+    ) -> any TypographyFontToken {
+        TypographyFontTokenClear()
+    }
 }
