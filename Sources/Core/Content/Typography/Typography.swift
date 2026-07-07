@@ -33,6 +33,12 @@ public protocol Typography: Hashable, Equatable {
     var smallHighlight: any TypographyFontToken { get }
 
     var callout: any TypographyFontToken { get }
+
+    func custom(
+        size: CGFloat,
+        style: TypographyFontStyle,
+        textStyle: TextStyle
+    ) -> any TypographyFontToken
 }
 
 // MARK: - Hashable & Equatable

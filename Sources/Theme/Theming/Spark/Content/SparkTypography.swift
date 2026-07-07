@@ -100,6 +100,20 @@ struct SparkTypography: Typography {
     // MARK: - Initialization
 
     init() {}
+
+    // MARK: - Methods
+
+    func custom(
+        size: CGFloat,
+        style: TypographyFontStyle,
+        textStyle: TextStyle
+    ) -> any TypographyFontToken {
+        return TypographyFontTokenDefault(
+            size: size,
+            style: style,
+            textStyle: textStyle
+        )
+    }
 }
 
 // MARK: - TypographyFont Extension

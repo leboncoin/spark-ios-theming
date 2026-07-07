@@ -39,6 +39,16 @@ struct RainbowTypography: Typography {
     // MARK: - Initialization
 
     init() {}
+
+    // MARK: - Methods
+
+    func custom(
+        size: CGFloat,
+        style: TypographyFontStyle,
+        textStyle: TextStyle
+    ) -> any TypographyFontToken {
+        RainbowTypographyToken()
+    }
 }
 
 // MARK: - Private Token

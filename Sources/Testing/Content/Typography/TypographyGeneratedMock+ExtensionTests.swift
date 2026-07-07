@@ -40,6 +40,8 @@ public extension TypographyGeneratedMock {
 
         typography.callout = TypographyFontTokenGeneratedMock.mocked(.callout)
 
+        typography.customWithSizeAndStyleAndTextStyleReturnValue = TypographyFontTokenGeneratedMock.mocked(.footnote)
+
         return typography
     }
 }
