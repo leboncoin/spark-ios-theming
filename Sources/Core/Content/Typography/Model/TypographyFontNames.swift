@@ -14,6 +14,7 @@ public struct TypographyFontNames: Equatable {
 
     public let regular: String
     public let medium: String
+    public let semiBold: String
     public let bold: String
 
     // MARK: - Initialization
@@ -21,16 +22,19 @@ public struct TypographyFontNames: Equatable {
     public init(
         regular: String,
         medium: String,
+        semiBold: String,
         bold: String
     ) {
         self.regular = regular
         self.medium = medium
+        self.semiBold = semiBold
         self.bold = bold
     }
 
     public init(fontName name: String) {
         self.regular = name
         self.medium = name
+        self.semiBold = name
         self.bold = name
     }
 
@@ -40,6 +44,7 @@ public struct TypographyFontNames: Equatable {
         return switch style {
         case .regular: self.regular
         case .medium: self.medium
+        case .semiBold: self.semiBold
         case .bold: self.bold
         }
     }

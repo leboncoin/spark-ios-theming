@@ -13,6 +13,8 @@ struct RainbowTypography: Typography {
 
     // MARK: - Properties
 
+    let bigTitle: any TypographyFontToken = RainbowTypographyToken()
+
     let display1: any TypographyFontToken = RainbowTypographyToken()
     let display2: any TypographyFontToken = RainbowTypographyToken()
     let display3: any TypographyFontToken = RainbowTypographyToken()

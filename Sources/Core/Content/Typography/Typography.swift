@@ -11,6 +11,8 @@ import SwiftUI
 
 // sourcery: AutoMockable
 public protocol Typography: Hashable, Equatable {
+    var bigTitle: any TypographyFontToken { get }
+
     var display1: any TypographyFontToken { get }
     var display2: any TypographyFontToken { get }
     var display3: any TypographyFontToken { get }
@@ -46,6 +48,8 @@ public protocol Typography: Hashable, Equatable {
 public extension Typography {
 
     func hash(into hasher: inout Hasher) {
+        hasher.combine(self.bigTitle)
+
         hasher.combine(self.display1)
         hasher.combine(self.display2)
         hasher.combine(self.display3)
@@ -71,7 +75,9 @@ public extension Typography {
     }
 
     func equals(_ other: any Typography) -> Bool {
-        return self.display1.equals(other.display1) &&
+        return self.bigTitle.equals(other.bigTitle) &&
+
+        self.display1.equals(other.display1) &&
         self.display2.equals(other.display2) &&
         self.display3.equals(other.display3) &&
 

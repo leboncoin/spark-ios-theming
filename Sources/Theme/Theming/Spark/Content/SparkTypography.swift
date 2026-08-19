@@ -14,6 +14,12 @@ struct SparkTypography: Typography {
 
     // MARK: - Properties
 
+    let bigTitle: any TypographyFontToken = TypographyFontTokenDefault(
+        size: 80,
+        style: .bold,
+        textStyle: .largeTitle
+    )
+
     let display1: any TypographyFontToken = TypographyFontTokenDefault(
         size: 40,
         style: .bold,
@@ -32,18 +38,18 @@ struct SparkTypography: Typography {
 
     let headline1: any TypographyFontToken = TypographyFontTokenDefault(
         size: 20,
-        style: .bold,
+        style: .semiBold,
         textStyle: .headline
     )
     let headline2: any TypographyFontToken = TypographyFontTokenDefault(
         size: 18,
-        style: .bold,
+        style: .semiBold,
         textStyle: .headline
     )
 
     let subhead: any TypographyFontToken = TypographyFontTokenDefault(
         size: 16,
-        style: .bold,
+        style: .semiBold,
         textStyle: .subheadline
     )
 
@@ -125,6 +131,7 @@ private extension TypographyFontTokenDefault {
     private enum Constants {
         static let regularFontName = "LBCDenimINK-Regular"
         static let mediumFontName = "LBCDenimINK-Medium"
+        static let semiBoldFontName = "LBCDenimINK-SemiBold"
         static let boldFontName = "LBCDenimINK-Bold"
     }
 
@@ -139,6 +146,7 @@ private extension TypographyFontTokenDefault {
             names: .init(
                 regular: Constants.regularFontName,
                 medium: Constants.mediumFontName,
+                semiBold: Constants.semiBoldFontName,
                 bold: Constants.boldFontName
             ),
             style: style,

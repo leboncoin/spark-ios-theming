@@ -9,5 +9,6 @@
 public enum TypographyFontStyle {
     case regular
     case medium
+    case semiBold
     case bold
 }

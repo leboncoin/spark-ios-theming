@@ -13,6 +13,8 @@ public struct TypographyDefault: Typography {
 
     // MARK: - Properties
 
+    public let bigTitle: any TypographyFontToken
+
     public let display1: any TypographyFontToken
     public let display2: any TypographyFontToken
     public let display3: any TypographyFontToken
@@ -39,6 +41,7 @@ public struct TypographyDefault: Typography {
     // MARK: - Initialization
 
     public init(
+        bigTitle: any TypographyFontToken,
         display1: any TypographyFontToken,
         display2: any TypographyFontToken,
         display3: any TypographyFontToken,
@@ -55,6 +58,7 @@ public struct TypographyDefault: Typography {
         smallHighlight: any TypographyFontToken,
         callout: any TypographyFontToken
     ) {
+        self.bigTitle = bigTitle
         self.display1 = display1
         self.display2 = display2
         self.display3 = display3
