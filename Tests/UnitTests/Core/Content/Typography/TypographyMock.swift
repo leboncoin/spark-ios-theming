@@ -16,6 +16,7 @@ final class TypographyMock {
 
     static func createMock1() -> TypographyDefault {
         return TypographyDefault(
+            bigTitle: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 0), font: .largeTitle),
             display1: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 1), font: .title),
             display2: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 2), font: .title2),
             display3: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 3), font: .title3),
@@ -36,6 +37,7 @@ final class TypographyMock {
 
     static func createMock2() -> TypographyDefault {
         return TypographyDefault(
+            bigTitle: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 0), font: .largeTitle),
             display1: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 1), font: .title),
             display2: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 2), font: .title2),
             display3: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 3), font: .title3),
@@ -56,6 +58,7 @@ final class TypographyMock {
 
     static func createDifferentMock() -> TypographyDefault {
         return TypographyDefault(
+            bigTitle: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 24), font: .callout),
             display1: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 25), font: .callout),
             display2: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 26), font: .callout),
             display3: TypographyFontTokenGeneratedMock.mocked(uiFont: .systemFont(ofSize: 27), font: .callout),
