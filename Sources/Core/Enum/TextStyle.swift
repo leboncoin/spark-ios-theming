@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 
 /// The TextStyle used by SwiftUI and UIKit
-@frozen public enum TextStyle {
+@frozen public enum TextStyle: CaseIterable {
     /// The font style for large titles.
     case largeTitle
     /// The font used for first level hierarchical headings.

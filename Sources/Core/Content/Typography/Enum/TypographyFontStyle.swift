@@ -6,7 +6,7 @@
 //  Copyright © 2026 Leboncoin. All rights reserved.
 //
 
-public enum TypographyFontStyle {
+public enum TypographyFontStyle: CaseIterable {
     case regular
     case medium
     case semiBold
