@@ -17,6 +17,8 @@ public extension TypographyGeneratedMock {
     static func mocked() -> TypographyGeneratedMock {
         let typography = TypographyGeneratedMock()
 
+        typography.bigTitle = TypographyFontTokenGeneratedMock.mocked(.largeTitle)
+
         typography.display1 = TypographyFontTokenGeneratedMock.mocked(.title)
         typography.display2 = TypographyFontTokenGeneratedMock.mocked(.title2)
         typography.display3 = TypographyFontTokenGeneratedMock.mocked(.title3)
