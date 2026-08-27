@@ -49,6 +49,26 @@ public protocol ColorsStates: Hashable, Equatable {
 
     var aiPressed: any ColorToken { get }
     var aiContainerPressed: any ColorToken { get }
+
+    // MARK: - Focus
+
+    var focusPressed: any ColorToken { get }
+    var focusContainerPressed: any ColorToken { get }
+
+    // MARK: - New
+
+    var newPressed: any ColorToken { get }
+    var newContainerPressed: any ColorToken { get }
+
+    // MARK: - Business
+
+    var businessPressed: any ColorToken { get }
+    var businessContainerPressed: any ColorToken { get }
+
+    // MARK: - Service
+
+    var servicePressed: any ColorToken { get }
+    var serviceContainerPressed: any ColorToken { get }
 }
 
 // MARK: - Hashable & Equatable
@@ -82,6 +102,14 @@ public extension ColorsStates {
         hasher.combine(self.neutralContainerPressed)
         hasher.combine(self.aiPressed)
         hasher.combine(self.aiContainerPressed)
+        hasher.combine(self.focusPressed)
+        hasher.combine(self.focusContainerPressed)
+        hasher.combine(self.newPressed)
+        hasher.combine(self.newContainerPressed)
+        hasher.combine(self.businessPressed)
+        hasher.combine(self.businessContainerPressed)
+        hasher.combine(self.servicePressed)
+        hasher.combine(self.serviceContainerPressed)
     }
 
     func equals(_ other: any ColorsStates) -> Bool {
@@ -110,7 +138,15 @@ public extension ColorsStates {
         self.neutralPressed.equals(other.neutralPressed) &&
         self.neutralContainerPressed.equals(other.neutralContainerPressed) &&
         self.aiPressed.equals(other.aiPressed) &&
-        self.aiContainerPressed.equals(other.aiContainerPressed)
+        self.aiContainerPressed.equals(other.aiContainerPressed) &&
+        self.focusPressed.equals(other.focusPressed) &&
+        self.focusContainerPressed.equals(other.focusContainerPressed) &&
+        self.newPressed.equals(other.newPressed) &&
+        self.newContainerPressed.equals(other.newContainerPressed) &&
+        self.businessPressed.equals(other.businessPressed) &&
+        self.businessContainerPressed.equals(other.businessContainerPressed) &&
+        self.servicePressed.equals(other.servicePressed) &&
+        self.serviceContainerPressed.equals(other.serviceContainerPressed)
     }
 
     static func == (lhs: Self, rhs: Self) -> Bool {

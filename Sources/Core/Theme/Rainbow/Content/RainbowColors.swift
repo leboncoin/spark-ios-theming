@@ -101,7 +101,15 @@ struct RainbowColors: Colors {
         neutralPressed: RainbowColorToken(color: .blue),
         neutralContainerPressed: RainbowColorToken(color: .green),
         aiPressed: RainbowColorToken(color: .yellow),
-        aiContainerPressed: RainbowColorToken(color: .orange)
+        aiContainerPressed: RainbowColorToken(color: .orange),
+        focusPressed: RainbowColorToken(color: .red),
+        focusContainerPressed: RainbowColorToken(color: .purple),
+        newPressed: RainbowColorToken(color: .blue),
+        newContainerPressed: RainbowColorToken(color: .green),
+        businessPressed: RainbowColorToken(color: .yellow),
+        businessContainerPressed: RainbowColorToken(color: .orange),
+        servicePressed: RainbowColorToken(color: .red),
+        serviceContainerPressed: RainbowColorToken(color: .purple)
     )
 
     let ai: any ColorsAI = ColorsAIDefault(
@@ -109,6 +117,34 @@ struct RainbowColors: Colors {
         onAI: RainbowColorToken(color: .green),
         aiContainer: RainbowColorToken(color: .blue),
         onAIContainer: RainbowColorToken(color: .purple)
+    )
+
+    let focus: any ColorsFocus = ColorsFocusDefault(
+        focus: RainbowColorToken(color: .red),
+        onFocus: RainbowColorToken(color: .orange),
+        focusContainer: RainbowColorToken(color: .yellow),
+        onFocusContainer: RainbowColorToken(color: .green)
+    )
+
+    let new: any ColorsNew = ColorsNewDefault(
+        new: RainbowColorToken(color: .blue),
+        onNew: RainbowColorToken(color: .purple),
+        newContainer: RainbowColorToken(color: .purple),
+        onNewContainer: RainbowColorToken(color: .blue)
+    )
+
+    let business: any ColorsBusiness = ColorsBusinessDefault(
+        business: RainbowColorToken(color: .green),
+        onBusiness: RainbowColorToken(color: .yellow),
+        businessContainer: RainbowColorToken(color: .orange),
+        onBusinessContainer: RainbowColorToken(color: .red)
+    )
+
+    let service: any ColorsService = ColorsServiceDefault(
+        service: RainbowColorToken(color: .orange),
+        onService: RainbowColorToken(color: .red),
+        serviceContainer: RainbowColorToken(color: .red),
+        onServiceContainer: RainbowColorToken(color: .orange)
     )
 
     // MARK: - Initialization

@@ -33,6 +33,14 @@ public struct ColorsStatesDefault: ColorsStates {
     public let neutralContainerPressed: any ColorToken
     public let aiPressed: any ColorToken
     public let aiContainerPressed: any ColorToken
+    public let focusPressed: any ColorToken
+    public let focusContainerPressed: any ColorToken
+    public let newPressed: any ColorToken
+    public let newContainerPressed: any ColorToken
+    public let businessPressed: any ColorToken
+    public let businessContainerPressed: any ColorToken
+    public let servicePressed: any ColorToken
+    public let serviceContainerPressed: any ColorToken
 
     // MARK: - Init
 
@@ -59,7 +67,15 @@ public struct ColorsStatesDefault: ColorsStates {
         neutralPressed: any ColorToken,
         neutralContainerPressed: any ColorToken,
         aiPressed: any ColorToken,
-        aiContainerPressed: any ColorToken
+        aiContainerPressed: any ColorToken,
+        focusPressed: any ColorToken,
+        focusContainerPressed: any ColorToken,
+        newPressed: any ColorToken,
+        newContainerPressed: any ColorToken,
+        businessPressed: any ColorToken,
+        businessContainerPressed: any ColorToken,
+        servicePressed: any ColorToken,
+        serviceContainerPressed: any ColorToken
     ) {
         self.mainPressed = mainPressed
         self.mainVariantPressed = mainVariantPressed
@@ -84,5 +100,13 @@ public struct ColorsStatesDefault: ColorsStates {
         self.neutralContainerPressed = neutralContainerPressed
         self.aiPressed = aiPressed
         self.aiContainerPressed = aiContainerPressed
+        self.focusPressed = focusPressed
+        self.focusContainerPressed = focusContainerPressed
+        self.newPressed = newPressed
+        self.newContainerPressed = newContainerPressed
+        self.businessPressed = businessPressed
+        self.businessContainerPressed = businessContainerPressed
+        self.servicePressed = servicePressed
+        self.serviceContainerPressed = serviceContainerPressed
     }
 }
