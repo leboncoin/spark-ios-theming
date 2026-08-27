@@ -20,6 +20,10 @@ public struct ColorsDefault: Colors {
     public let feedback: any ColorsFeedback
     public let states: any ColorsStates
     public let ai: any ColorsAI
+    public let focus: any ColorsFocus
+    public let new: any ColorsNew
+    public let business: any ColorsBusiness
+    public let service: any ColorsService
 
     // MARK: - Initialization
 
@@ -30,7 +34,11 @@ public struct ColorsDefault: Colors {
         base: any ColorsBase,
         feedback: any ColorsFeedback,
         states: any ColorsStates,
-        ai: any ColorsAI
+        ai: any ColorsAI,
+        focus: any ColorsFocus,
+        new: any ColorsNew,
+        business: any ColorsBusiness,
+        service: any ColorsService
     ) {
         self.main = main
         self.support = support
@@ -39,5 +47,9 @@ public struct ColorsDefault: Colors {
         self.feedback = feedback
         self.states = states
         self.ai = ai
+        self.focus = focus
+        self.new = new
+        self.business = business
+        self.service = service
     }
 }

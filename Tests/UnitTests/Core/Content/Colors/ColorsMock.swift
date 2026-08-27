@@ -99,13 +99,45 @@ final class ColorsMock {
                 neutralPressed: ColorTokenGeneratedMock.purple(),
                 neutralContainerPressed: ColorTokenGeneratedMock.red(),
                 aiPressed: ColorTokenGeneratedMock.blue(),
-                aiContainerPressed: ColorTokenGeneratedMock.green()
+                aiContainerPressed: ColorTokenGeneratedMock.green(),
+                focusPressed: ColorTokenGeneratedMock.orange(),
+                focusContainerPressed: ColorTokenGeneratedMock.yellow(),
+                newPressed: ColorTokenGeneratedMock.purple(),
+                newContainerPressed: ColorTokenGeneratedMock.red(),
+                businessPressed: ColorTokenGeneratedMock.blue(),
+                businessContainerPressed: ColorTokenGeneratedMock.green(),
+                servicePressed: ColorTokenGeneratedMock.orange(),
+                serviceContainerPressed: ColorTokenGeneratedMock.yellow()
             ),
             ai: ColorsAIDefault(
                 ai: ColorTokenGeneratedMock.red(),
                 onAI: ColorTokenGeneratedMock.blue(),
                 aiContainer: ColorTokenGeneratedMock.green(),
                 onAIContainer: ColorTokenGeneratedMock.orange()
+            ),
+            focus: ColorsFocusDefault(
+                focus: ColorTokenGeneratedMock.red(),
+                onFocus: ColorTokenGeneratedMock.blue(),
+                focusContainer: ColorTokenGeneratedMock.green(),
+                onFocusContainer: ColorTokenGeneratedMock.orange()
+            ),
+            new: ColorsNewDefault(
+                new: ColorTokenGeneratedMock.yellow(),
+                onNew: ColorTokenGeneratedMock.purple(),
+                newContainer: ColorTokenGeneratedMock.red(),
+                onNewContainer: ColorTokenGeneratedMock.blue()
+            ),
+            business: ColorsBusinessDefault(
+                business: ColorTokenGeneratedMock.green(),
+                onBusiness: ColorTokenGeneratedMock.orange(),
+                businessContainer: ColorTokenGeneratedMock.yellow(),
+                onBusinessContainer: ColorTokenGeneratedMock.purple()
+            ),
+            service: ColorsServiceDefault(
+                service: ColorTokenGeneratedMock.red(),
+                onService: ColorTokenGeneratedMock.blue(),
+                serviceContainer: ColorTokenGeneratedMock.green(),
+                onServiceContainer: ColorTokenGeneratedMock.orange()
             )
         )
     }
@@ -195,13 +227,45 @@ final class ColorsMock {
                 neutralPressed: ColorTokenGeneratedMock.purple(),
                 neutralContainerPressed: ColorTokenGeneratedMock.red(),
                 aiPressed: ColorTokenGeneratedMock.blue(),
-                aiContainerPressed: ColorTokenGeneratedMock.green()
+                aiContainerPressed: ColorTokenGeneratedMock.green(),
+                focusPressed: ColorTokenGeneratedMock.orange(),
+                focusContainerPressed: ColorTokenGeneratedMock.yellow(),
+                newPressed: ColorTokenGeneratedMock.purple(),
+                newContainerPressed: ColorTokenGeneratedMock.red(),
+                businessPressed: ColorTokenGeneratedMock.blue(),
+                businessContainerPressed: ColorTokenGeneratedMock.green(),
+                servicePressed: ColorTokenGeneratedMock.orange(),
+                serviceContainerPressed: ColorTokenGeneratedMock.yellow()
             ),
             ai: ColorsAIDefault(
                 ai: ColorTokenGeneratedMock.red(),
                 onAI: ColorTokenGeneratedMock.blue(),
                 aiContainer: ColorTokenGeneratedMock.green(),
                 onAIContainer: ColorTokenGeneratedMock.orange()
+            ),
+            focus: ColorsFocusDefault(
+                focus: ColorTokenGeneratedMock.red(),
+                onFocus: ColorTokenGeneratedMock.blue(),
+                focusContainer: ColorTokenGeneratedMock.green(),
+                onFocusContainer: ColorTokenGeneratedMock.orange()
+            ),
+            new: ColorsNewDefault(
+                new: ColorTokenGeneratedMock.yellow(),
+                onNew: ColorTokenGeneratedMock.purple(),
+                newContainer: ColorTokenGeneratedMock.red(),
+                onNewContainer: ColorTokenGeneratedMock.blue()
+            ),
+            business: ColorsBusinessDefault(
+                business: ColorTokenGeneratedMock.green(),
+                onBusiness: ColorTokenGeneratedMock.orange(),
+                businessContainer: ColorTokenGeneratedMock.yellow(),
+                onBusinessContainer: ColorTokenGeneratedMock.purple()
+            ),
+            service: ColorsServiceDefault(
+                service: ColorTokenGeneratedMock.red(),
+                onService: ColorTokenGeneratedMock.blue(),
+                serviceContainer: ColorTokenGeneratedMock.green(),
+                onServiceContainer: ColorTokenGeneratedMock.orange()
             )
         )
     }
@@ -291,13 +355,45 @@ final class ColorsMock {
                 neutralPressed: ColorTokenGeneratedMock.clear,
                 neutralContainerPressed: ColorTokenGeneratedMock.clear,
                 aiPressed: ColorTokenGeneratedMock.clear,
-                aiContainerPressed: ColorTokenGeneratedMock.clear
+                aiContainerPressed: ColorTokenGeneratedMock.clear,
+                focusPressed: ColorTokenGeneratedMock.clear,
+                focusContainerPressed: ColorTokenGeneratedMock.clear,
+                newPressed: ColorTokenGeneratedMock.clear,
+                newContainerPressed: ColorTokenGeneratedMock.clear,
+                businessPressed: ColorTokenGeneratedMock.clear,
+                businessContainerPressed: ColorTokenGeneratedMock.clear,
+                servicePressed: ColorTokenGeneratedMock.clear,
+                serviceContainerPressed: ColorTokenGeneratedMock.clear
             ),
             ai: ColorsAIDefault(
                 ai: ColorTokenGeneratedMock.clear,
                 onAI: ColorTokenGeneratedMock.clear,
                 aiContainer: ColorTokenGeneratedMock.clear,
                 onAIContainer: ColorTokenGeneratedMock.clear
+            ),
+            focus: ColorsFocusDefault(
+                focus: ColorTokenGeneratedMock.clear,
+                onFocus: ColorTokenGeneratedMock.clear,
+                focusContainer: ColorTokenGeneratedMock.clear,
+                onFocusContainer: ColorTokenGeneratedMock.clear
+            ),
+            new: ColorsNewDefault(
+                new: ColorTokenGeneratedMock.clear,
+                onNew: ColorTokenGeneratedMock.clear,
+                newContainer: ColorTokenGeneratedMock.clear,
+                onNewContainer: ColorTokenGeneratedMock.clear
+            ),
+            business: ColorsBusinessDefault(
+                business: ColorTokenGeneratedMock.clear,
+                onBusiness: ColorTokenGeneratedMock.clear,
+                businessContainer: ColorTokenGeneratedMock.clear,
+                onBusinessContainer: ColorTokenGeneratedMock.clear
+            ),
+            service: ColorsServiceDefault(
+                service: ColorTokenGeneratedMock.clear,
+                onService: ColorTokenGeneratedMock.clear,
+                serviceContainer: ColorTokenGeneratedMock.clear,
+                onServiceContainer: ColorTokenGeneratedMock.clear
             )
         )
     }
