@@ -43,6 +43,18 @@ public extension ColorsStatesGeneratedMock {
         mock.underlyingAiPressed = ColorTokenGeneratedMock.random()
         mock.underlyingAiContainerPressed = ColorTokenGeneratedMock.random()
 
+        mock.underlyingFocusPressed = ColorTokenGeneratedMock.random()
+        mock.underlyingFocusContainerPressed = ColorTokenGeneratedMock.random()
+
+        mock.underlyingNewPressed = ColorTokenGeneratedMock.random()
+        mock.underlyingNewContainerPressed = ColorTokenGeneratedMock.random()
+
+        mock.underlyingBusinessPressed = ColorTokenGeneratedMock.random()
+        mock.underlyingBusinessContainerPressed = ColorTokenGeneratedMock.random()
+
+        mock.underlyingServicePressed = ColorTokenGeneratedMock.random()
+        mock.underlyingServiceContainerPressed = ColorTokenGeneratedMock.random()
+
         return mock
     }
 }
