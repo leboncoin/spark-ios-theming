@@ -19,21 +19,21 @@ struct TypographyFontNamesTests {
         // GIVEN
         let regular = "Helvetica"
         let medium = "Helvetica-Medium"
-        let semiBold = "Helvetica-SemiBold"
+        let semibold = "Helvetica-SemiBold"
         let bold = "Helvetica-Bold"
 
         // WHEN
         let fontNames = TypographyFontNames(
             regular: regular,
             medium: medium,
-            semiBold: semiBold,
+            semibold: semibold,
             bold: bold
         )
 
         // THEN
         #expect(fontNames.regular == regular)
         #expect(fontNames.medium == medium)
-        #expect(fontNames.semiBold == semiBold)
+        #expect(fontNames.semibold == semibold)
         #expect(fontNames.bold == bold)
     }
 
@@ -48,7 +48,7 @@ struct TypographyFontNamesTests {
         // THEN
         #expect(fontNames.regular == fontName)
         #expect(fontNames.medium == fontName)
-        #expect(fontNames.semiBold == fontName)
+        #expect(fontNames.semibold == fontName)
         #expect(fontNames.bold == fontName)
     }
 
@@ -58,7 +58,7 @@ struct TypographyFontNamesTests {
         let fontNames = TypographyFontNames(
             regular: "Font-Regular",
             medium: "Font-Medium",
-            semiBold: "Font-SemiBold",
+            semibold: "Font-SemiBold",
             bold: "Font-Bold"
         )
 
@@ -75,7 +75,7 @@ struct TypographyFontNamesTests {
         let fontNames = TypographyFontNames(
             regular: "Font-Regular",
             medium: "Font-Medium",
-            semiBold: "Font-SemiBold",
+            semibold: "Font-SemiBold",
             bold: "Font-Bold"
         )
 
@@ -86,18 +86,18 @@ struct TypographyFontNamesTests {
         #expect(fontName == "Font-Medium")
     }
 
-    @Test("Get font name for semiBold style")
+    @Test("Get font name for semibold style")
     func getFontNameForSemiBoldStyle() {
         // GIVEN
         let fontNames = TypographyFontNames(
             regular: "Font-Regular",
             medium: "Font-Medium",
-            semiBold: "Font-SemiBold",
+            semibold: "Font-SemiBold",
             bold: "Font-Bold"
         )
 
         // WHEN
-        let fontName = fontNames.getFontName(from: .semiBold)
+        let fontName = fontNames.getFontName(from: .semibold)
 
         // THEN
         #expect(fontName == "Font-SemiBold")
@@ -109,7 +109,7 @@ struct TypographyFontNamesTests {
         let fontNames = TypographyFontNames(
             regular: "Font-Regular",
             medium: "Font-Medium",
-            semiBold: "Font-SemiBold",
+            semibold: "Font-SemiBold",
             bold: "Font-Bold"
         )
 
@@ -126,14 +126,14 @@ struct TypographyFontNamesTests {
         let fontNames1 = TypographyFontNames(
             regular: "Arial",
             medium: "Arial-Medium",
-            semiBold: "Arial-SemiBold",
+            semibold: "Arial-SemiBold",
             bold: "Arial-Bold"
         )
 
         let fontNames2 = TypographyFontNames(
             regular: "Arial",
             medium: "Arial-Medium",
-            semiBold: "Arial-SemiBold",
+            semibold: "Arial-SemiBold",
             bold: "Arial-Bold"
         )
 
@@ -147,14 +147,14 @@ struct TypographyFontNamesTests {
         let fontNames1 = TypographyFontNames(
             regular: "Arial",
             medium: "Arial-Medium",
-            semiBold: "Arial-SemiBold",
+            semibold: "Arial-SemiBold",
             bold: "Arial-Bold"
         )
 
         let fontNames2 = TypographyFontNames(
             regular: "Helvetica",
             medium: "Arial-Medium",
-            semiBold: "Arial-SemiBold",
+            semibold: "Arial-SemiBold",
             bold: "Arial-Bold"
         )
 
@@ -168,14 +168,14 @@ struct TypographyFontNamesTests {
         let fontNames1 = TypographyFontNames(
             regular: "Arial",
             medium: "Arial-Medium",
-            semiBold: "Arial-SemiBold",
+            semibold: "Arial-SemiBold",
             bold: "Arial-Bold"
         )
 
         let fontNames2 = TypographyFontNames(
             regular: "Arial",
             medium: "Helvetica-Medium",
-            semiBold: "Arial-SemiBold",
+            semibold: "Arial-SemiBold",
             bold: "Arial-Bold"
         )
 
@@ -183,20 +183,20 @@ struct TypographyFontNamesTests {
         #expect(fontNames1 != fontNames2)
     }
 
-    @Test("Inequality when different semiBold")
+    @Test("Inequality when different semibold")
     func inequalityWhenDifferentSemiBold() {
         // GIVEN / WHEN
         let fontNames1 = TypographyFontNames(
             regular: "Arial",
             medium: "Arial-Medium",
-            semiBold: "Arial-SemiBold",
+            semibold: "Arial-SemiBold",
             bold: "Arial-Bold"
         )
 
         let fontNames2 = TypographyFontNames(
             regular: "Arial",
             medium: "Arial-Medium",
-            semiBold: "Helvetica-SemiBold",
+            semibold: "Helvetica-SemiBold",
             bold: "Arial-Bold"
         )
 
@@ -210,14 +210,14 @@ struct TypographyFontNamesTests {
         let fontNames1 = TypographyFontNames(
             regular: "Arial",
             medium: "Arial-Medium",
-            semiBold: "Arial-SemiBold",
+            semibold: "Arial-SemiBold",
             bold: "Arial-Bold"
         )
 
         let fontNames2 = TypographyFontNames(
             regular: "Arial",
             medium: "Arial-Medium",
-            semiBold: "Arial-SemiBold",
+            semibold: "Arial-SemiBold",
             bold: "Helvetica-Bold"
         )
 
@@ -254,7 +254,7 @@ struct TypographyFontNamesTests {
         // WHEN / THEN
         #expect(fontNames.getFontName(from: .regular) == fontName)
         #expect(fontNames.getFontName(from: .medium) == fontName)
-        #expect(fontNames.getFontName(from: .semiBold) == fontName)
+        #expect(fontNames.getFontName(from: .semibold) == fontName)
         #expect(fontNames.getFontName(from: .bold) == fontName)
     }
 }

@@ -38,8 +38,8 @@ public protocol Typography: Hashable, Equatable {
 
     func custom(
         size: CGFloat,
-        style: TypographyFontStyle,
-        textStyle: TextStyle
+        weight: TypographyFontWeight,
+        style: TypographyFontStyle
     ) -> any TypographyFontToken
 }
 

@@ -12,8 +12,8 @@ import SwiftUI
 
     // MARK: - Initialization
 
-    init(from textStyle: TextStyle) {
-        switch textStyle {
+    init(from style: TypographyFontStyle) {
+        switch style {
         case .largeTitle:
             self = .largeTitle
         case .title:

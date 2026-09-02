@@ -15,14 +15,14 @@ public struct TypographyFontTokenDefault: TypographyFontToken {
 
     // MARK: - Private Properties
 
-    private let fontStyle: TypographyFontStyle
+    private let weight: TypographyFontWeight
     private let fontNames: TypographyFontNames
     private let fontSize: CGFloat
-    private let fontTextStyle: TextStyle
+    private let fontTextStyle: TypographyFontStyle
 
     private var fontName: String {
         let boldFontName = self.fontNames.bold
-        let fontName = self.fontNames.getFontName(from: self.fontStyle)
+        let fontName = self.fontNames.getFontName(from: self.weight)
 
         return UIAccessibility.isBoldTextEnabled ? boldFontName : fontName
     }
@@ -33,16 +33,16 @@ public struct TypographyFontTokenDefault: TypographyFontToken {
         guard let font = UIFont(name: self.fontName, size: self.fontSize) else {
             fatalError("Missing font named \(self.fontName)")
         }
-        let textStyle = UIFont.TextStyle(from: self.fontTextStyle)
-        return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
+        let style = UIFont.TextStyle(from: self.fontTextStyle)
+        return UIFontMetrics(forTextStyle: style).scaledFont(for: font)
     }
 
     public var font: Font {
-        let textStyle = Font.TextStyle(from: self.fontTextStyle)
+        let style = Font.TextStyle(from: self.fontTextStyle)
         return Font.custom(
             self.fontName,
             size: self.fontSize,
-            relativeTo: textStyle
+            relativeTo: style
         )
     }
 
@@ -50,26 +50,26 @@ public struct TypographyFontTokenDefault: TypographyFontToken {
 
     public init(
         named fontName: String,
-        style: TypographyFontStyle = .regular,
+        weight: TypographyFontWeight = .regular,
         size: CGFloat,
-        textStyle: TextStyle
+        style: TypographyFontStyle
     ) {
         let fontNames = TypographyFontNames(fontName: fontName)
         self.fontNames = fontNames
-        self.fontStyle = style
+        self.weight = weight
         self.fontSize = size
-        self.fontTextStyle = textStyle
+        self.fontTextStyle = style
     }
 
     public init(
         names: TypographyFontNames,
-        style: TypographyFontStyle,
+        weight: TypographyFontWeight,
         size: CGFloat,
-        textStyle: TextStyle
+        style: TypographyFontStyle
     ) {
         self.fontNames = names
-        self.fontStyle = style
+        self.weight = weight
         self.fontSize = size
-        self.fontTextStyle = textStyle
+        self.fontTextStyle = style
     }
 }
