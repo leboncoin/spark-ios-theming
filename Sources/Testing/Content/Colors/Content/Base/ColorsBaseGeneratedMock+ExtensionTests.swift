@@ -24,6 +24,8 @@ public extension ColorsBaseGeneratedMock {
         mock.underlyingOnSurface = ColorTokenGeneratedMock.random()
         mock.underlyingSurfaceInverse = ColorTokenGeneratedMock.random()
         mock.underlyingOnSurfaceInverse = ColorTokenGeneratedMock.random()
+        mock.underlyingSurfaceDark = ColorTokenGeneratedMock.random()
+        mock.underlyingOnSurfaceDark = ColorTokenGeneratedMock.random()
 
         mock.underlyingOutline = ColorTokenGeneratedMock.random()
         mock.underlyingOutlineHigh = ColorTokenGeneratedMock.random()

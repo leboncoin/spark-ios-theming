@@ -22,6 +22,8 @@ public protocol ColorsBase: Hashable, Equatable {
     var onSurface: any ColorToken { get }
     var surfaceInverse: any ColorToken { get }
     var onSurfaceInverse: any ColorToken { get }
+    var surfaceDark: any ColorToken { get }
+    var onSurfaceDark: any ColorToken { get }
 
     // MARK: - Outline
 
@@ -48,6 +50,8 @@ public extension ColorsBase {
         hasher.combine(self.onSurface)
         hasher.combine(self.surfaceInverse)
         hasher.combine(self.onSurfaceInverse)
+        hasher.combine(self.surfaceDark)
+        hasher.combine(self.onSurfaceDark)
 
         hasher.combine(self.outline)
         hasher.combine(self.outlineHigh)
@@ -66,6 +70,8 @@ public extension ColorsBase {
         self.onSurface.equals(other.onSurface) &&
         self.surfaceInverse.equals(other.surfaceInverse) &&
         self.onSurfaceInverse.equals(other.onSurfaceInverse) &&
+        self.surfaceDark.equals(other.surfaceDark) &&
+        self.onSurfaceDark.equals(other.onSurfaceDark) &&
 
         self.outline.equals(other.outline) &&
         self.outlineHigh.equals(other.outlineHigh) &&
