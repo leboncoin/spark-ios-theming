@@ -31,6 +31,7 @@ public protocol ColorsStates: Hashable, Equatable {
 
     var surfacePressed: any ColorToken { get }
     var surfaceInversePressed: any ColorToken { get }
+    var surfaceDarkPressed: any ColorToken { get }
 
     // MARK: - Feedback
 
@@ -90,6 +91,7 @@ public extension ColorsStates {
 
         hasher.combine(self.surfacePressed)
         hasher.combine(self.surfaceInversePressed)
+        hasher.combine(self.surfaceDarkPressed)
         hasher.combine(self.successPressed)
         hasher.combine(self.successContainerPressed)
         hasher.combine(self.alertPressed)
@@ -127,6 +129,7 @@ public extension ColorsStates {
 
         self.surfacePressed.equals(other.surfacePressed) &&
         self.surfaceInversePressed.equals(other.surfaceInversePressed) &&
+        self.surfaceDarkPressed.equals(other.surfaceDarkPressed) &&
         self.successPressed.equals(other.successPressed) &&
         self.successContainerPressed.equals(other.successContainerPressed) &&
         self.alertPressed.equals(other.alertPressed) &&

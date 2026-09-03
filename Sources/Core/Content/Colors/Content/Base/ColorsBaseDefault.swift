@@ -18,6 +18,8 @@ public struct ColorsBaseDefault: ColorsBase {
     public let onSurface: any ColorToken
     public let surfaceInverse: any ColorToken
     public let onSurfaceInverse: any ColorToken
+    public let surfaceDark: any ColorToken
+    public let onSurfaceDark: any ColorToken
     public let outline: any ColorToken
     public let outlineHigh: any ColorToken
     public let overlay: any ColorToken
@@ -34,6 +36,8 @@ public struct ColorsBaseDefault: ColorsBase {
         onSurface: any ColorToken,
         surfaceInverse: any ColorToken,
         onSurfaceInverse: any ColorToken,
+        surfaceDark: any ColorToken,
+        onSurfaceDark: any ColorToken,
         outline: any ColorToken,
         outlineHigh: any ColorToken,
         overlay: any ColorToken,
@@ -47,6 +51,8 @@ public struct ColorsBaseDefault: ColorsBase {
         self.onSurface = onSurface
         self.surfaceInverse = surfaceInverse
         self.onSurfaceInverse = onSurfaceInverse
+        self.surfaceDark = surfaceDark
+        self.onSurfaceDark = onSurfaceDark
         self.outline = outline
         self.outlineHigh = outlineHigh
         self.overlay = overlay
