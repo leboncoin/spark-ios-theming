@@ -23,4 +23,16 @@ public extension ColorsServiceGeneratedMock {
 
         return mock
     }
+
+    static func mocked2() -> ColorsServiceGeneratedMock {
+        let mock = ColorsServiceGeneratedMock()
+
+        mock.underlyingService = ColorTokenGeneratedMock.random()
+        mock.underlyingOnService = ColorTokenGeneratedMock.random()
+
+        mock.underlyingServiceContainer = ColorTokenGeneratedMock.random()
+        mock.underlyingOnServiceContainer = ColorTokenGeneratedMock.random()
+
+        return mock
+    }
 }

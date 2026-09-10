@@ -16,6 +16,14 @@ public extension BorderGeneratedMock {
 
         return border
     }
+
+    static func mocked2() -> BorderGeneratedMock {
+        let border = BorderGeneratedMock()
+        border.radius = BorderRadiusGeneratedMock.mocked2()
+        border.width = BorderWidthGeneratedMock.mocked2()
+
+        return border
+    }
 }
 
 public extension BorderRadiusGeneratedMock {
@@ -27,6 +35,15 @@ public extension BorderRadiusGeneratedMock {
         radius.xLarge = 24
         return radius
     }
+
+    static func mocked2() -> BorderRadiusGeneratedMock {
+        let radius = BorderRadiusGeneratedMock()
+        radius.small = 6
+        radius.medium = 12
+        radius.large = 20
+        radius.xLarge = 32
+        return radius
+    }
 }
 
 public extension BorderWidthGeneratedMock {
@@ -34,6 +51,13 @@ public extension BorderWidthGeneratedMock {
         let width = BorderWidthGeneratedMock()
         width.small = 1
         width.medium = 2
+        return width
+    }
+
+    static func mocked2() -> BorderWidthGeneratedMock {
+        let width = BorderWidthGeneratedMock()
+        width.small = 2
+        width.medium = 3
         return width
     }
 }

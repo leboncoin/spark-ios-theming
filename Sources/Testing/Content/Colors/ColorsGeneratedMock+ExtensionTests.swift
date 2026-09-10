@@ -29,4 +29,22 @@ public extension ColorsGeneratedMock {
 
         return mock
     }
+
+    static func mocked2() -> ColorsGeneratedMock {
+        let mock = ColorsGeneratedMock()
+
+        mock.main = ColorsMainGeneratedMock.mocked2()
+        mock.support = ColorsSupportGeneratedMock.mocked2()
+        mock.accent = ColorsAccentGeneratedMock.mocked2()
+        mock.base = ColorsBaseGeneratedMock.mocked2()
+        mock.feedback = ColorsFeedbackGeneratedMock.mocked2()
+        mock.states = ColorsStatesGeneratedMock.mocked2()
+        mock.ai = ColorsAIGeneratedMock.mocked2()
+        mock.focus = ColorsFocusGeneratedMock.mocked2()
+        mock.new = ColorsNewGeneratedMock.mocked2()
+        mock.business = ColorsBusinessGeneratedMock.mocked2()
+        mock.service = ColorsServiceGeneratedMock.mocked2()
+
+        return mock
+    }
 }

@@ -21,4 +21,17 @@ public extension ThemeGeneratedMock {
 
         return theme
     }
+
+    static func mocked2() -> ThemeGeneratedMock {
+        let theme = ThemeGeneratedMock()
+
+        theme.border = BorderGeneratedMock.mocked2()
+        theme.colors = ColorsGeneratedMock.mocked2()
+        theme.elevation = ElevationGeneratedMock.mocked2()
+        theme.layout = LayoutGeneratedMock.mocked2()
+        theme.typography = TypographyGeneratedMock.mocked2()
+        theme.dims = DimsGeneratedMock.mocked2()
+
+        return theme
+    }
 }
