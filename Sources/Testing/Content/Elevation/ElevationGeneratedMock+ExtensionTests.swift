@@ -18,6 +18,13 @@ public extension ElevationGeneratedMock {
 
         return mock
     }
+
+    static func mocked2() -> ElevationGeneratedMock {
+        let mock = ElevationGeneratedMock()
+        mock.dropShadow = ElevationDropShadowsGeneratedMock.mocked2()
+
+        return mock
+    }
 }
 
 public extension ElevationDropShadowsGeneratedMock {
@@ -38,6 +45,21 @@ public extension ElevationDropShadowsGeneratedMock {
 
         return mock
     }
+
+    static func mocked2() -> ElevationShadowAndDropShadowGeneratedMock {
+        let mock = ElevationShadowAndDropShadowGeneratedMock()
+        mock.offset = .init(x: 12, y: 13)
+        mock.blur = 0.6
+        mock.colorToken = ColorTokenGeneratedMock.green()
+        mock.opacity = 0.5
+
+        mock.small = ElevationShadowGeneratedMock.mocked2()
+        mock.medium = ElevationShadowGeneratedMock.mocked2()
+        mock.large = ElevationShadowGeneratedMock.mocked2()
+        mock.extraLarge = ElevationShadowGeneratedMock.mocked2()
+
+        return mock
+    }
 }
 
 public extension ElevationShadowGeneratedMock {
@@ -50,6 +72,16 @@ public extension ElevationShadowGeneratedMock {
         mock.blur = 0.2
         mock.colorToken = ColorTokenGeneratedMock.blue()
         mock.opacity = 0.8
+
+        return mock
+    }
+
+    static func mocked2() -> ElevationShadowGeneratedMock {
+        let mock = ElevationShadowGeneratedMock()
+        mock.offset = .init(x: 24, y: 26)
+        mock.blur = 0.3
+        mock.colorToken = ColorTokenGeneratedMock.green()
+        mock.opacity = 0.7
 
         return mock
     }

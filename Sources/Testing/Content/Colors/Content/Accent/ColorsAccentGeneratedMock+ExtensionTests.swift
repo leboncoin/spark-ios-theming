@@ -26,4 +26,19 @@ public extension ColorsAccentGeneratedMock {
 
         return mock
     }
+
+    static func mocked2() -> ColorsAccentGeneratedMock {
+        let mock = ColorsAccentGeneratedMock()
+
+        mock.underlyingAccent = ColorTokenGeneratedMock.random()
+        mock.underlyingOnAccent = ColorTokenGeneratedMock.random()
+
+        mock.underlyingAccentVariant = ColorTokenGeneratedMock.random()
+        mock.underlyingOnAccentVariant = ColorTokenGeneratedMock.random()
+
+        mock.underlyingAccentContainer = ColorTokenGeneratedMock.random()
+        mock.underlyingOnAccentContainer = ColorTokenGeneratedMock.random()
+
+        return mock
+    }
 }

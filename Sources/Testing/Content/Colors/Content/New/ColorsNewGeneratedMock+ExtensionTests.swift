@@ -23,4 +23,16 @@ public extension ColorsNewGeneratedMock {
 
         return mock
     }
+
+    static func mocked2() -> ColorsNewGeneratedMock {
+        let mock = ColorsNewGeneratedMock()
+
+        mock.underlyingNew = ColorTokenGeneratedMock.random()
+        mock.underlyingOnNew = ColorTokenGeneratedMock.random()
+
+        mock.underlyingNewContainer = ColorTokenGeneratedMock.random()
+        mock.underlyingOnNewContainer = ColorTokenGeneratedMock.random()
+
+        return mock
+    }
 }

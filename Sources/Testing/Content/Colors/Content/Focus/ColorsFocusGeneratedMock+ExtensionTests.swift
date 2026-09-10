@@ -23,4 +23,16 @@ public extension ColorsFocusGeneratedMock {
 
         return mock
     }
+
+    static func mocked2() -> ColorsFocusGeneratedMock {
+        let mock = ColorsFocusGeneratedMock()
+
+        mock.underlyingFocus = ColorTokenGeneratedMock.random()
+        mock.underlyingOnFocus = ColorTokenGeneratedMock.random()
+
+        mock.underlyingFocusContainer = ColorTokenGeneratedMock.random()
+        mock.underlyingOnFocusContainer = ColorTokenGeneratedMock.random()
+
+        return mock
+    }
 }

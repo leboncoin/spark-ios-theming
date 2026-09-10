@@ -18,6 +18,13 @@ public extension LayoutGeneratedMock {
 
         return mock
     }
+
+    static func mocked2() -> LayoutGeneratedMock {
+        let mock = LayoutGeneratedMock()
+        mock.spacing = LayoutSpacingGeneratedMock.mocked2()
+
+        return mock
+    }
 }
 
 public extension LayoutSpacingGeneratedMock {
@@ -33,6 +40,19 @@ public extension LayoutSpacingGeneratedMock {
         mock.xLarge = 9
         mock.xxLarge = 11
         mock.xxxLarge = 13
+
+        return mock
+    }
+
+    static func mocked2() -> LayoutSpacingGeneratedMock {
+        let mock = LayoutSpacingGeneratedMock()
+        mock.none = 2
+        mock.small = 4
+        mock.medium = 6
+        mock.large = 10
+        mock.xLarge = 12
+        mock.xxLarge = 14
+        mock.xxxLarge = 16
 
         return mock
     }
