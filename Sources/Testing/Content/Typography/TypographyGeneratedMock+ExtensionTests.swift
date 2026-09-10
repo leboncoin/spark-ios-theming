@@ -50,32 +50,32 @@ public extension TypographyGeneratedMock {
     static func mocked2() -> TypographyGeneratedMock {
         let typography = TypographyGeneratedMock()
 
-        typography.bigTitle = TypographyFontTokenGeneratedMock.mocked(.largeTitle)
+        typography.bigTitle = TypographyFontTokenGeneratedMock.mocked(.title)
 
-        typography.display1 = TypographyFontTokenGeneratedMock.mocked(.title)
-        typography.display2 = TypographyFontTokenGeneratedMock.mocked(.title2)
-        typography.display3 = TypographyFontTokenGeneratedMock.mocked(.title3)
+        typography.display1 = TypographyFontTokenGeneratedMock.mocked(.title2)
+        typography.display2 = TypographyFontTokenGeneratedMock.mocked(.title3)
+        typography.display3 = TypographyFontTokenGeneratedMock.mocked(.headline)
 
-        typography.headline1 = TypographyFontTokenGeneratedMock.mocked(.headline)
-        typography.headline2 = TypographyFontTokenGeneratedMock.mocked(.headline)
+        typography.headline1 = TypographyFontTokenGeneratedMock.mocked(.subheadline)
+        typography.headline2 = TypographyFontTokenGeneratedMock.mocked(.body)
 
-        typography.subhead = TypographyFontTokenGeneratedMock.mocked(.subheadline)
+        typography.subhead = TypographyFontTokenGeneratedMock.mocked(.callout)
 
-        typography.body1 = TypographyFontTokenGeneratedMock.mocked(.body)
-        typography.body1Highlight = TypographyFontTokenGeneratedMock.mocked(.body.bold())
-        typography.body2 = TypographyFontTokenGeneratedMock.mocked(.body)
-        typography.body2Highlight = TypographyFontTokenGeneratedMock.mocked(.body.bold())
+        typography.body1 = TypographyFontTokenGeneratedMock.mocked(.footnote)
+        typography.body1Highlight = TypographyFontTokenGeneratedMock.mocked(.footnote.bold())
+        typography.body2 = TypographyFontTokenGeneratedMock.mocked(.caption)
+        typography.body2Highlight = TypographyFontTokenGeneratedMock.mocked(.caption.bold())
 
-        typography.caption = TypographyFontTokenGeneratedMock.mocked(.caption)
-        typography.captionHighlight = TypographyFontTokenGeneratedMock.mocked(.caption.bold())
+        typography.caption = TypographyFontTokenGeneratedMock.mocked(.caption2)
+        typography.captionHighlight = TypographyFontTokenGeneratedMock.mocked(.caption2.bold())
 
-        typography.small = TypographyFontTokenGeneratedMock.mocked(.caption2)
-        typography.smallHighlight = TypographyFontTokenGeneratedMock.mocked(.caption2.bold())
-        typography.subhead = TypographyFontTokenGeneratedMock.mocked(.subheadline)
+        typography.small = TypographyFontTokenGeneratedMock.mocked(.footnote)
+        typography.smallHighlight = TypographyFontTokenGeneratedMock.mocked(.footnote.bold())
+        typography.subhead = TypographyFontTokenGeneratedMock.mocked(.callout)
 
-        typography.callout = TypographyFontTokenGeneratedMock.mocked(.callout)
+        typography.callout = TypographyFontTokenGeneratedMock.mocked(.body)
 
-        typography.customWithSizeAndWeightAndStyleReturnValue = TypographyFontTokenGeneratedMock.mocked(.footnote)
+        typography.customWithSizeAndWeightAndStyleReturnValue = TypographyFontTokenGeneratedMock.mocked(.caption)
 
         return typography
     }
